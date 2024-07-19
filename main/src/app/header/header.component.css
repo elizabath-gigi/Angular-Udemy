@@ -1,0 +1,23 @@
+header {
+    background-color: #1F747B;
+    text-align: center;
+    padding: 20px;
+}
+img {
+    width: 3.5rem;
+    object-fit: contain;
+  }
+  h1 {
+    font-size: 1.25rem;
+    margin: 0;
+    padding: 0;
+  }
+  @media (min-width: 768px) {
+    header {
+      padding: 2rem;
+    }
+  
+    img {
+      width: 4.5rem;
+    }
+}

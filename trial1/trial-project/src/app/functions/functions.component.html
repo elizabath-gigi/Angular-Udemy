@@ -1,0 +1,14 @@
+<div class="container">
+    <button (click)="getBooks()">Get Books </button>
+    <button (click)="onAddBook()">Add Book </button>
+    <button (click)="getBook()">Get Book</button>
+    <button (click)="addBookFromFile()">Add Books</button>
+    <button (click)="getBooksInPages()">Get Books</button>
+    <button (click)="updateBook()">Update Book</button>
+    <button (click)="deleteBook()">Delete Books</button>
+</div>
+<app-user-input *ngIf="isAddingBook" [buttonName]="buttonName" /> 
+<!-- <h1>Get Method</h1>
+    <p>{{getJsonValue|json}}</p>
+<h1>Post Method</h1>
+    <p>{{postJsonValue|json}}</p>-->

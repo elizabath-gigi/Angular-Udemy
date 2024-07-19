@@ -1,0 +1,27 @@
+<div class="popup">
+  <dialog open>
+    <form (ngSubmit)="addBook()">
+          <label for="bookName">Book Name:</label>
+          <input id="bookName" [(ngModel)]="book.bookName" name="bookName" required>
+          <br>
+          
+          <label for="bookAuthor">Book Author:</label>
+          <input id="bookAuthor" [(ngModel)]="book.bookAuthor" name="bookAuthor" required>
+          <br>
+          
+          <label for="noOfBook">Number of Book:</label>
+          <input id="noOfBook" [(ngModel)]="book.noOfBook" name="noOfBooks" required>
+          <br>
+          
+          <label for="price">Price:</label>
+          <input id="price" [(ngModel)]="book.price" name="price" required>
+          <br>
+          
+          <button type="button" (click)="addBook()">Add Book</button>
+        
+      
+    </form>
+  </dialog>
+  
+
+</div>

@@ -1,0 +1,30 @@
+.container {
+    background-color:#0d5b69  ;
+    width: 200px;
+    display: flex;
+    flex-direction: column; /* Align buttons vertically */
+    align-items: flex-start;/* Align buttons to the left*/
+    padding: 10px; /* Add padding around the container */
+    margin-left:5px;
+    margin-top: 10px;
+    justify-content: center;
+}
+ button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 5px; /* Add space between buttons */
+    background-color: #5F9EA0;
+    color: black;
+    border: 2px solid black; /* Add a black border */
+    border-radius: 2px; /* Optional: Add rounded corners */
+    font: inherit;
+    cursor: pointer;
+    text-align: center;
+    width: 150px; /* Set a fixed width for buttons */
+    height: 40px;
+}  
+
+
+
+ 
