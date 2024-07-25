@@ -1,0 +1,27 @@
+<div class="popup">
+    <dialog open>
+      <form class="form-container">
+        <div>
+          <label for="bookId">Book Id:</label>
+          <input id="bookId" [(ngModel)]="bookId" name="bookId" required>
+        </div>        
+        <button type="button" (click)="userInput()">{{buttonName}}</button>
+      </form>
+      <app-message *ngIf="message!= null"[message]="message"></app-message>
+      <form *ngIf="postJsonValue != null && buttonName=='Get'">
+        <div *ngIf="entries.length > 0">
+          <div *ngFor="let entry of entries">
+            <p>{{ entry[0] }}: {{ entry[1] }}</p>
+          </div>
+        </div>
+      </form>
+      
+    </dialog>
+  </div>
+
+
+
+  
+  
+  
+   

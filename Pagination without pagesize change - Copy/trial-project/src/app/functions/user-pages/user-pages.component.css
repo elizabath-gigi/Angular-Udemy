@@ -1,0 +1,41 @@
+.table {
+  width: 80%; /* You can set this to any desired width */
+  max-width: 600px; /* Or use max-width to limit the maximum width */
+  left: 300px;
+  top: 350px;
+  position: absolute;
+
+  
+
+}
+  
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Ensures borders are combined into a single border */
+ 
+
+}
+
+th, td {
+  padding: 0.5rem; /* Add padding for header and data cells */
+  text-align: center; /* Center align text */
+}
+
+th {
+  background-color: #f5f5f5; /* Light gray background for headers */
+  font-weight: bold;
+  border-bottom: 2px solid #ddd; /* Border under header cells */
+}
+
+td {
+  border-bottom: 1px solid #ddd; /* Border under data cells */
+}
+
+tr {
+  background-color: #f9f9f9; /* Alternating row colors for better readability */
+}
+
+tr:hover {
+  background-color: #92c0c0; /* Hover effect for rows */
+}

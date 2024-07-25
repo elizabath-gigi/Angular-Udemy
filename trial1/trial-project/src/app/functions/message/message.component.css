@@ -1,0 +1,10 @@
+.success-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(14, 13, 13);
+  color: rgb(199, 206, 199);
+  font-weight: bold;
+  margin-top: 1rem;
+}
