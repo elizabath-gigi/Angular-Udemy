@@ -1,13 +1,13 @@
 <div class="table-container">
   <table>
-    <thead>
-      <tr>
-        <th>Book ID</th>
-        <th>Book Name</th>
-        <th>Author</th>
-        <th>No. of Books</th>
-        <th>Price</th>
-      </tr>
+    <thead >
+       <th *ngFor="let header of HeaderColumn">{{header|uppercase}}</th>
+        <!-- <th>BOOKID</th>
+        <th>BOOKNAME</th>
+        <th>BOOKAUTHOR</th>
+        <th>NOOFBOOK</th>
+        <th>PRICE</th> -->
+      
     </thead>
     <tbody>
       <tr *ngFor="let book of paginatedBooks">
@@ -19,17 +19,16 @@
       </tr>
     </tbody>
   </table>
-
-  <!-- Page size input -->
   <div class="page-size">
     <label for="pageSize">Items per page:</label>
     <input id="pageSize" type="number" [(ngModel)]="pageSize" (change)="onPageSizeChange()" min="1">
   </div>
 
-  <!-- Pagination Controls -->
+  
   <div class="pagination-controls">
     <button (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
     <span>Page {{currentPage}} of {{totalPages}}</span>
     <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
   </div>
+  <app-message *ngIf="message!=null" [message]=message/>
 </div>

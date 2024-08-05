@@ -43,30 +43,61 @@ userInput()
     this.updateBook();
   }
 }
-  addBook()
+addBook() {
+  if(this.book.bookAuthor==""||this.book.bookName==""||this.book.noOfBook==""||this.book.price=="")
   {
-    this.functionsService.addBook(this.book)
-    this.message="Added Successfully";
-    this.book = {
-      bookId: 0,
-      bookName: '',
-      bookAuthor: '',
-      noOfBook:'',
-      price: ''
-    }; 
+    alert("All fields are requied")
+  }
+  else{
+    this.functionsService.addBook(this.book).subscribe({
+      next: () => {
+        this.message = "Added Successfully";
+        this.book = {
+          bookId: 0,
+          bookName: '',
+          bookAuthor: '',
+          noOfBook: '',
+          price: ''
+        };
+      },
+      error: error => {
+        console.error('Error from server: ', error);
+        const errorMessage = error.error;
+          this.message=errorMessage;
+          alert(errorMessage);
+          console.log(errorMessage)
+      }
+    });
+  }
   
-  }  
-  updateBook()
-  {
-    this.functionsService.updateBook(this.book)
-    this.message="Updated Successfully";
-      this.book = {
-        bookId: 0,
-        bookName: '',
-        bookAuthor: '',
-        noOfBook:'',
-        price: ''
-      }; 
+}
+  updateBook() {
+    if(this.book.bookAuthor==""||this.book.bookName==""||this.book.noOfBook==""||this.book.price==""||this.book.bookId==0)
+      {
+        alert("All fields are requied")
+      }
+      else{
+        this.functionsService.updateBook(this.book).subscribe({
+          next: () => {
+            this.message = "Updated Successfully";
+            this.book = {
+              bookId: 0,
+              bookName: '',
+              bookAuthor: '',
+              noOfBook: '',
+              price: ''
+            };
+          },
+          error: error => {
+            console.error('Error from server: ', error);
+            const errorMessage = error.error;
+            this.message=errorMessage;
+            alert(errorMessage);
+            console.log(errorMessage)
+          }
+        });
+      }
+    
   }
   
 }

@@ -3,13 +3,13 @@
         <div class="file-input-container">
             <input type="file" (change)="onFileSelected($event)" required />
         </div>
-        <button type="submit" [disabled]="!form.valid">Upload</button>
-        <div *ngIf="uploadProgress !== null" class="progress-container">
+        <button type="submit">Upload</button>
+        <app-message *ngIf="message!= null" [message]="message"/>
+        <!-- <div *ngIf="uploadProgress !== null" class="progress-container">
             Upload Progress: {{ uploadProgress }}%
             <div class="progress-bar">
                 <div class="progress" [style.width]="uploadProgress + '%'"></div>
             </div>
-        </div>
+        </div> -->
     </form>
 </div>
-<app-message *ngIf="message!= null"[message]="message"></app-message>

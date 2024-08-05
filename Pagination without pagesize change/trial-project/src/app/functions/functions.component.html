@@ -1,4 +1,17 @@
 <div >
+    <div class="header">
+        
+        <div class="title">
+            <h1>Library Management</h1>
+        </div>
+        <div class="greeting">
+            <h5>Hi {{username}}</h5>
+        </div>
+        <div class="logout">
+            <a (click)="logout()">Logout</a>
+        </div>
+        
+    </div>
     <div class="buttons">
         <button (click)="getBooks()">Get Books </button>
         <button (click)="onAddBook()">Add Book </button>
@@ -17,8 +30,7 @@
     <div class="books">
         <app-user-table *ngIf="isFunction==='GetBooks'" [getJsonValue]="getJsonValue"/>
     </div>
-    
-</div>
+    <app-message *ngIf="message!=null" [message]=message/>
 
 
 

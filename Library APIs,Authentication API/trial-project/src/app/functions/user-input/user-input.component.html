@@ -1,0 +1,32 @@
+<div class="popup">
+  <dialog open>
+    <form class="form-container">
+      <div *ngIf="buttonName === 'Update'" class="form-group">
+        <label for="bookId">Book Id:</label>
+        <input id="bookId" [(ngModel)]="book.bookId" name="bookId" required>
+      </div>
+
+      <div class="form-group">
+        <label for="bookName">Book Name:</label>
+        <input id="bookName" [(ngModel)]="book.bookName" name="bookName" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="bookAuthor">Book Author:</label>
+        <input id="bookAuthor" [(ngModel)]="book.bookAuthor" name="bookAuthor" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="noOfBooks">Number of Book:</label>
+        <input id="noOfBooks" [(ngModel)]="book.noOfBook" name="noOfBooks" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input id="price" [(ngModel)]="book.price" name="price" required>
+      </div>
+      <button type="button" (click)="userInput()">{{buttonName}}</button>
+    </form>
+    <app-message *ngIf="message!= null"[message]="message"></app-message>
+  </dialog>
+ </div>

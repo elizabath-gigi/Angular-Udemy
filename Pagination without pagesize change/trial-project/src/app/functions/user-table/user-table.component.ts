@@ -16,6 +16,5 @@ export class UserTableComponent implements OnInit{
 
    ngOnInit(): void {
     this.dataSource = new MatTableDataSource(this.getJsonValue);
-    console.table(this.getJsonValue);
    }
 }

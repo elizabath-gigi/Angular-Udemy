@@ -1,52 +1,65 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FunctionsService } from '../functions.service';
-import { MatTableDataSource } from '@angular/material/table';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatPaginator } from '@angular/material/paginator';
+
 @Component({
   selector: 'app-user-pages',
-  standalone: false,
   templateUrl: './user-pages.component.html',
-  styleUrl: './user-pages.component.css'
+  styleUrls: ['./user-pages.component.css']
 })
 export class UserPagesComponent implements OnInit {
-  getJsonValue: any[] = [];
   paginatedBooks: any[] = [];
   currentPage: number = 1;
-  pageSize: number = 10;
-  totalPages: number = 0;
+  totalPages!: number;
+  totalCount!:number;
+  pageSize: number = 10; // Default page size
+  HeaderColumn: any;
+  message!: string;
 
   constructor(private functionsService: FunctionsService) {}
 
   ngOnInit(): void {
-    this.loadBooks();
-  }
-
-  loadBooks(): void {
     this.functionsService.getBooks().subscribe(data => {
-      this.getJsonValue = data;
-      this.totalPages = Math.ceil(this.getJsonValue.length / this.pageSize);
-      this.paginateBooks();
+    this.totalCount = data.length;
+    this.HeaderColumn=Object.keys(data[0]);
+    this.loadBooks(this.currentPage, this.pageSize);
     });
   }
 
-  paginateBooks(): void {
-    const startIndex = (this.currentPage - 1) * this.pageSize;
-    const endIndex = startIndex + this.pageSize;
-    this.paginatedBooks = this.getJsonValue.slice(startIndex, endIndex);
+  loadBooks(pageIndex: number, pageSize: number): void {
+    this.functionsService.getBooksInPages(pageIndex, pageSize).subscribe({
+      next: (data) => {
+        this.paginatedBooks = data;
+        this.totalPages = Math.ceil(this.totalCount / pageSize);
+      },
+      error: (error) => {
+        console.error('Error from server: ', error);
+        const errorMessage = error.error ;
+        this.message = errorMessage;
+        alert(errorMessage);
+        console.log(errorMessage);
+      }
+    });
   }
 
-  nextPage(): void {
-    if (this.currentPage < this.totalPages) {
-      this.currentPage++;
-      this.paginateBooks();
+  onPageSizeChange(): void {
+    if (this.pageSize <= 0) {
+      this.pageSize = 1; 
     }
+    this.currentPage = 1; 
+    this.loadBooks(this.currentPage, this.pageSize);
   }
 
   previousPage(): void {
     if (this.currentPage > 1) {
       this.currentPage--;
-      this.paginateBooks();
+      this.loadBooks(this.currentPage, this.pageSize);
+    }
+  }
+
+  nextPage(): void {
+    if (this.currentPage < this.totalPages) {
+      this.currentPage++;
+      this.loadBooks(this.currentPage, this.pageSize);
     }
   }
 }

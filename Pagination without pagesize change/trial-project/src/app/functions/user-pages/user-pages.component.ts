@@ -12,31 +12,40 @@ export class UserPagesComponent implements OnInit {
   totalPages!: number;
   totalCount!:number;
   pageSize: number = 10; // Default page size
+  HeaderColumn: any;
+  message!: string;
 
   constructor(private functionsService: FunctionsService) {}
 
   ngOnInit(): void {
     this.functionsService.getBooks().subscribe(data => {
     this.totalCount = data.length;
-    console.log(this.totalCount)
+    this.HeaderColumn=Object.keys(data[0]);
     this.loadBooks(this.currentPage, this.pageSize);
-    
-       // Calculate total pages
     });
   }
 
   loadBooks(pageIndex: number, pageSize: number): void {
-    this.functionsService.getBooksInPages(pageIndex, pageSize).subscribe(data => {
-      this.paginatedBooks = data;
-      this.totalPages = Math.ceil(this.totalCount / pageSize); // Calculate total pages
+    this.functionsService.getBooksInPages(pageIndex, pageSize).subscribe({
+      next: (data) => {
+        this.paginatedBooks = data;
+        this.totalPages = Math.ceil(this.totalCount / pageSize);
+      },
+      error: (error) => {
+        console.error('Error from server: ', error);
+        const errorMessage = error.error ;
+        this.message = errorMessage;
+        alert(errorMessage);
+        console.log(errorMessage);
+      }
     });
   }
 
   onPageSizeChange(): void {
     if (this.pageSize <= 0) {
-      this.pageSize = 1; // Ensure page size is positive
+      this.pageSize = 1; 
     }
-    this.currentPage = 1; // Reset to first page
+    this.currentPage = 1; 
     this.loadBooks(this.currentPage, this.pageSize);
   }
 

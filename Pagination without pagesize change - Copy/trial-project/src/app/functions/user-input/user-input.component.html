@@ -1,40 +1,9 @@
-<!-- <div class="popup">
-  <dialog open>
-    <form class>
-      <label *ngIf="buttonName === 'Update'">Book Id:</label>
-      <input *ngIf="buttonName === 'Update'" [(ngModel)]="book.bookName" name="bookName" required>
-      <br *ngIf="buttonName === 'Update'">
-
-      <label>Book Name:</label>
-          <input  [(ngModel)]="book.bookName" name="bookName" required>
-          <br>
-          
-          <label>Book Author:</label>
-          <input  [(ngModel)]="book.bookAuthor" name="bookAuthor" required>
-          <br>
-          
-          <label>Number of Book:</label>
-          <input [(ngModel)]="book.noOfBook" name="noOfBooks" required>
-          <br>
-          
-          <label >Price:</label>
-          <input [(ngModel)]="book.price" name="price" required>
-          <br>
-          
-          <button type="button" (click)="userInput()">{{buttonName}}</button>
-
-          
-        
-      
-    </form>
-  </dialog>
-</div> -->
 <div class="popup">
   <dialog open>
-    <form class="form-container">
+    <form class="form-container" #popupForm="ngForm" (ngSubmit)="userInput()">
       <div *ngIf="buttonName === 'Update'" class="form-group">
         <label for="bookId">Book Id:</label>
-        <input id="bookId" [(ngModel)]="book.bookId" name="bookId" required>
+        <input id="bookId" [(ngModel)]="book.bookId" name="bookId" required >
       </div>
 
       <div class="form-group">
@@ -48,16 +17,17 @@
       </div>
       
       <div class="form-group">
-        <label for="noOfBooks">Number of Book:</label>
-        <input id="noOfBooks" [(ngModel)]="book.noOfBook" name="noOfBooks" required>
+        <label for="noOfBooks">Number of Books:</label>
+        <input id="noOfBooks" [(ngModel)]="book.noOfBook" name="noOfBooks" required >
       </div>
       
       <div class="form-group">
         <label for="price">Price:</label>
-        <input id="price" [(ngModel)]="book.price" name="price" required>
+        <input id="price" [(ngModel)]="book.price" name="price" required >
       </div>
-      <button type="button" (click)="userInput()">{{buttonName}}</button>
+      <button type="submit">{{buttonName}}</button>
     </form>
-    <app-message *ngIf="message!= null"[message]="message"></app-message>
+    <app-message *ngIf="message" [message]="message"></app-message>
   </dialog>
- </div>
+</div>
+
