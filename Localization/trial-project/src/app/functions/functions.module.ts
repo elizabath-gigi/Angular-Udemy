@@ -1,5 +1,3 @@
-
-
 import { FunctionsService } from "./functions.service";
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
@@ -9,7 +7,7 @@ import { FormsModule, NgModel, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule} from "@angular/common";
 
-
+import { FunctionsUserComponent } from './functions-user/functions-user.component';
 import { FunctionsComponent } from './functions.component';
 import { UserInputComponent } from "./user-input/user-input.component";
 import { NgIf,NgFor } from "@angular/common";
@@ -36,7 +34,8 @@ import { JWT_OPTIONS, JwtHelperService, JwtModule } from "@auth0/angular-jwt";
     MessageComponent,
     UserTableComponent,
     UserPagesComponent,
-    UserFileComponent
+    UserFileComponent,
+    FunctionsUserComponent
   ],
   imports: [
     HttpClientModule,

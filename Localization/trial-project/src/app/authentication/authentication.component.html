@@ -1,7 +1,7 @@
 <form *ngIf="selected==='register'" class="form-container" #registerForm="ngForm" (ngSubmit)="register(user)">
   <div class="form-group">
     <label i18n for="Username">Username:</label>
-    <input id="Username" [(ngModel)]="user.username" name="Username" required >
+    <input id="Username" [(ngModel)]="user.userName" name="Username" required >
   </div>
   
   <div class="form-group">
@@ -14,6 +14,11 @@
     <label i18n for="Email">Email:</label>
     <input id="Email" [(ngModel)]="user.email" name="Email" required >
     
+  </div>
+
+  <div class="form-group">
+    <label i18n for="Name in Hindi">Name in Hindi:</label>
+    <input id="Name in Hindi" [(ngModel)]="user.nameHindi" name="Name in Hindi" required >
   </div>
   
   <button i18n class="button-Register" type="submit">Register</button>
@@ -35,7 +40,7 @@
   
   <button i18n class="button-Login" type="submit" >Login</button>
   <button i18n class="button-Register" type="button" (click)="changeToRegister()">Register</button>
-  <button i18n class="button-Register" type="button" (click)="changeToReset()">Reset Password</button>
+  <button i18n class="button-Reset" type="button" (click)="changeToReset()">Reset Password</button>
 </form>
 
 <form *ngIf="selected==='reset'" class="form-container" #resetForm="ngForm" (ngSubmit)="reset(resetDto)">

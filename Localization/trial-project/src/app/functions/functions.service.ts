@@ -13,6 +13,40 @@ export class FunctionsService
     constructor(private http:HttpClient){
 
     }
+    getUsers(): Observable<any>
+    {
+      //   this.http.get('https://localhost:7220/api/Library/getBooks').subscribe((data) => {
+      //   this.getJsonValue = data;
+      //   console.log('inside service',this.getJsonValue);
+      //   return (this.getJsonValue);
+      // });
+       return this.http.get('https://localhost:7254/Library/getBooks')   
+    }
+    getUserById(): Observable<any>
+    {
+      //   this.http.get('https://localhost:7220/api/Library/getBooks').subscribe((data) => {
+      //   this.getJsonValue = data;
+      //   console.log('inside service',this.getJsonValue);
+      //   return (this.getJsonValue);
+      // });
+       return this.http.get('https://localhost:7254/Library/getBooks')   
+    }
+    getUserByUsername(): Observable<any>
+    {
+      //   this.http.get('https://localhost:7220/api/Library/getBooks').subscribe((data) => {
+      //   this.getJsonValue = data;
+      //   console.log('inside service',this.getJsonValue);
+      //   return (this.getJsonValue);
+      // });
+       return this.http.get('https://localhost:7254/Library/getBooks')   
+    }
+    deleteUser(bookId:number)
+    {
+        const header=new HttpHeaders({
+            contentsType:"application/json"
+          })
+          return this.http.delete(`https://localhost:7254/Library/deleteBook?id=${bookId}`,{headers:header})    
+    }
     getBooks(): Observable<any>
     {
       //   this.http.get('https://localhost:7220/api/Library/getBooks').subscribe((data) => {

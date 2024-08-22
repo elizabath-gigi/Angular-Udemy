@@ -7,7 +7,8 @@
       "i18n":{
         "sourceLocale":"en-US",
         "locales":{
-          "hi":"src/locale/messages.hi.xlf"
+          "hi":"src/assets/locale/messages.hi.xlf"
+          
         }
       },
       "projectType": "application",
@@ -19,9 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "localize":[
-              "hi"
-            ],
+            "localize":["en-US","hi"],
             "outputPath": "dist/trial-project",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -31,6 +30,9 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
+              "src/assets",
+              "src/assets/locale",
+              "src/favicon.ico",
               {
                 "glob": "**/*",
                 "input": "public"
@@ -44,11 +46,12 @@
           },
           "configurations": {
             "production": {
+              "localize":["en-US","hi"],
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "1mb",
+                  "maximumError": "2MB"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -56,12 +59,23 @@
                   "maximumError": "4kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref":"/"
             },
             "development": {
+              "localize": ["en-US"],
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "baseHref": "/en/" 
+            },
+            "development-hi": {
+              "localize": ["hi"],
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+               "baseHref": "/hi/"
             }
           },
           "defaultConfiguration": "production"
@@ -74,7 +88,11 @@
             },
             "development": {
               "buildTarget": "trial-project:build:development"
+            },
+            "development-hi": {
+              "buildTarget": "trial-project:build:development-hi"
             }
+
           },
           "defaultConfiguration": "development"
         },

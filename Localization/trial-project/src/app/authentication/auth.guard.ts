@@ -6,7 +6,7 @@ import { AuthenticationService } from './authentication.service';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-  constructor(private authenticationService: AuthenticationService, private router: Router) {}
+  constructor(private router: Router) {}
 
   canActivate(): boolean {
     const token = localStorage.getItem('authToken');

@@ -1,9 +1,9 @@
 import { provideRouter, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import { FunctionsModule } from './functions/functions.module';
-
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -24,15 +24,15 @@ import { AuthInterceptor } from './authentication/auth.interceptor';
       FunctionsModule,
       CommonModule,
       FormsModule,
-      RouterModule.forRoot(routes)
-
-
+      RouterModule.forRoot(routes),
+      TranslateModule.forRoot()
     ],
     bootstrap:[AppComponent],
     providers: [
       { provide: HTTP_INTERCEPTORS, 
         useClass: AuthInterceptor, 
         multi: true },
+        TranslateService
     ],
 })
 

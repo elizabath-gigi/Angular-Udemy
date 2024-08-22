@@ -12,7 +12,13 @@ import { ResetDto } from "./resetDto";
     constructor(private http:HttpClient){
 
     }
-     
+    getNameInHindi(username:string):Observable<any>
+    {
+        const header=new HttpHeaders({
+            contentsType:"application/json"
+             })
+             return this.http.get(`https://localhost:7261/User/getNameHindi?UserName=${username}`,{ responseType: 'text' as 'json' }) 
+    }
     register(user:User):Observable<any>
     {
         const header=new HttpHeaders({

@@ -3,7 +3,7 @@ import { AuthenticationComponent } from './authentication.component';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule, NgFor, NgIf } from '@angular/common';
-
+import { JWT_OPTIONS, JwtHelperService, JwtModule } from "@auth0/angular-jwt";
 
 @NgModule(
     {
@@ -14,9 +14,14 @@ import { CommonModule, NgFor, NgIf } from '@angular/common';
             FormsModule,
             CommonModule,
             NgIf,
-            NgFor
+            NgFor,
+            JwtModule
         ],
-        exports:[]
+        exports:[],
+        providers: [ {
+            provide: JWT_OPTIONS,
+            useValue: JWT_OPTIONS
+          },JwtHelperService] 
     }
 )
 export class AuthenticationModule{

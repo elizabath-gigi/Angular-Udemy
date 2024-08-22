@@ -5,21 +5,27 @@
             <h1 i18n>Library Management</h1>
         </div>
         <div class="greeting">
-            <h5 i18n >Hi {{username}}</h5>
+            <h5><span i18n>Hi</span> {{username}}</h5>
         </div>
         <div class="logout">
             <a i18n (click)="logout()">Logout</a>
         </div>
         
-    </div>
+</div>
     <div class="buttons">
         <button i18n (click)="getBooks()">Get Books </button>
         <button i18n (click)="getBook()">Get Book</button>
         <button i18n (click)="getBooksInPages()">Get Books In Pages</button>
-        <button i18n *ngIf="role=='Admin'" (click)="onAddBook()">Add Book </button>
-        <button i18n *ngIf="role=='Admin'" (click)="bulkUpload()">Bulk Upload</button>
-        <button i18n *ngIf="role=='Admin'" (click)="updateBook()">Update Book</button>
-        <button i18n *ngIf="role=='Admin'" (click)="deleteBook()">Delete Books</button>
+        <button i18n (click)="onAddBook()">Add Book </button>
+        <button i18n (click)="bulkUpload()">Bulk Upload</button>
+        <button i18n (click)="updateBook()">Update Book</button>
+        <button i18n (click)="deleteBook()">Delete Book</button>
+    </div>
+    <div class="buttons-users">
+        <button i18n (click)="getUsers()">Get Users </button>
+        <button i18n (click)="getUserById()">Get User By Id</button>
+        <button i18n (click)="getUserByUsername()">Get User By Username</button>
+        <button i18n (click)="deleteUser()">Delete User</button>
     </div>
     <app-user-input  *ngIf="isFunction === 'Add'" [buttonName]="buttonName" [isFunction]="isFunction"/> 
     <app-user-input  *ngIf="isFunction === 'Update'" [buttonName]="buttonName" [isFunction]="isFunction"/> 

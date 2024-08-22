@@ -4,163 +4,191 @@
     <body>
       <trans-unit id="7242925173901107379" datatype="html">
         <source>trial-project</source>
+        <target>परीक्षण-परियोजना</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.ts</context>
-          <context context-type="linenumber">15</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="140822705245800362" datatype="html">
         <source>Username:</source>
+        <target>उपयोगकर्ता नाम:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.html</context>
           <context context-type="linenumber">3,4</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.html</context>
-          <context context-type="linenumber">25,26</context>
+          <context context-type="linenumber">30,31</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.html</context>
-          <context context-type="linenumber">43,44</context>
+          <context context-type="linenumber">48,49</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6865009229971482891" datatype="html">
         <source>Password:</source>
+        <target>पासवर्ड:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.html</context>
           <context context-type="linenumber">8,9</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.html</context>
-          <context context-type="linenumber">31,32</context>
+          <context context-type="linenumber">36,37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6631334172623029500" datatype="html">
         <source>Email:</source>
+        <target>ईमेल:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.html</context>
           <context context-type="linenumber">14,15</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3301086086650990787" datatype="html">
-        <source>Register</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/authentication/authentication.component.html</context>
-          <context context-type="linenumber">19,20</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/authentication/authentication.component.html</context>
-          <context context-type="linenumber">37,38</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2454050363478003966" datatype="html">
-        <source>Login</source>
+      <trans-unit id="7921679648654991925" datatype="html">
+        <source>Name in Hindi:</source>
+        <target>हिंदी में नाम</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.html</context>
           <context context-type="linenumber">20,21</context>
         </context-group>
+      </trans-unit>
+      <trans-unit id="3301086086650990787" datatype="html">
+        <source>Register</source>
+        <target>पंजीकरण करवाना</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.html</context>
-          <context context-type="linenumber">36,37</context>
+          <context context-type="linenumber">24,25</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.html</context>
-          <context context-type="linenumber">61,62</context>
+          <context context-type="linenumber">42,43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2454050363478003966" datatype="html">
+        <source>Login</source>
+        <target>लॉग इन करें</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/authentication/authentication.component.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/authentication/authentication.component.html</context>
+          <context context-type="linenumber">41,42</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/authentication/authentication.component.html</context>
+          <context context-type="linenumber">66,67</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6972105223770675605" datatype="html">
         <source>Reset Password</source>
+        <target>पासवर्ड रीसेट</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.html</context>
-          <context context-type="linenumber">38,39</context>
+          <context context-type="linenumber">43,44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7225929388560844354" datatype="html">
         <source>Old Password:</source>
+        <target>पुराना पासवर्ड:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.html</context>
-          <context context-type="linenumber">49,50</context>
+          <context context-type="linenumber">54,55</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4073232574714623251" datatype="html">
         <source>New Password:</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/authentication/authentication.component.html</context>
-          <context context-type="linenumber">55,56</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7808756054397155068" datatype="html">
-        <source>Reset</source>
+        <target>नया पासवर्ड:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.html</context>
           <context context-type="linenumber">60,61</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="7808756054397155068" datatype="html">
+        <source>Reset</source>
+        <target>रीसेट</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/authentication/authentication.component.html</context>
+          <context context-type="linenumber">65,66</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="8012545147501920089" datatype="html">
         <source>All Fields are required</source>
+        <target>सभी फ़ील्ड आवश्यक हैं</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.ts</context>
-          <context context-type="linenumber">48</context>
+          <context context-type="linenumber">49</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3713449669435436942" datatype="html">
         <source>Registration successful</source>
+        <target>सफल पंजीकरण</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.ts</context>
-          <context context-type="linenumber">53</context>
+          <context context-type="linenumber">54</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4768910277713013490" datatype="html">
         <source>Error from server:</source>
+        <target>सर्वर से त्रुटि:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.ts</context>
-          <context context-type="linenumber">58</context>
+          <context context-type="linenumber">59</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8522724834918408709" datatype="html">
         <source>Registration failed.</source>
+        <target>पंजीकरण विफल रहा</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.ts</context>
-          <context context-type="linenumber">63</context>
+          <context context-type="linenumber">64</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3174495843910953299" datatype="html">
         <source>Invalid email format.</source>
+        <target>अमान्य ईमेल प्रारूप</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.ts</context>
-          <context context-type="linenumber">68</context>
+          <context context-type="linenumber">70</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1998535935071452655" datatype="html">
         <source>Username must be at least 3 characters long.</source>
+        <target>उपयोगकर्ता नाम कम से कम 3 अक्षर लंबा होना चाहिए</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.ts</context>
-          <context context-type="linenumber">73</context>
+          <context context-type="linenumber">76</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4870506648472351042" datatype="html">
         <source>Password must be at least 6 characters long and must have at least one special character and uppercase letter.</source>
+        <target>पासवर्ड कम से कम 6 अक्षर लंबा होना चाहिए और इसमें कम से कम एक विशेष अक्षर और बड़ा अक्षर होना चाहिए</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.ts</context>
-          <context context-type="linenumber">78</context>
+          <context context-type="linenumber">82</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5845562389517164274" datatype="html">
         <source>Login Failed.</source>
+        <target>लॉगिन विफल</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.ts</context>
-          <context context-type="linenumber">110</context>
+          <context context-type="linenumber">115</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6437248547439878735" datatype="html">
         <source>Password Reset Failed.</source>
+        <target>पासवर्ड रीसेट विफल</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.ts</context>
-          <context context-type="linenumber">138</context>
+          <context context-type="linenumber">143</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="7104142794096645804" datatype="html">
+     <trans-unit id="7104142794096645804" datatype="html">
         <source>Library Management</source>
+        <target>पुस्तकालय प्रबंधन</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.html</context>
           <context context-type="linenumber">5,6</context>
@@ -168,6 +196,7 @@
       </trans-unit>
       <trans-unit id="247216622169649341" datatype="html">
         <source>Hi <x id="INTERPOLATION" equiv-text="{{username}}"/></source>
+        <target>नमस्ते</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.html</context>
           <context context-type="linenumber">8,9</context>
@@ -175,6 +204,7 @@
       </trans-unit>
       <trans-unit id="3797778920049399855" datatype="html">
         <source>Logout</source>
+        <target>लॉग आउट</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.html</context>
           <context context-type="linenumber">11,12</context>
@@ -182,6 +212,7 @@
       </trans-unit>
       <trans-unit id="3964902201556331636" datatype="html">
         <source>Get Books </source>
+        <target>पुस्तकें प्राप्त करें</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.html</context>
           <context context-type="linenumber">16,17</context>
@@ -189,6 +220,7 @@
       </trans-unit>
       <trans-unit id="6419918696857564386" datatype="html">
         <source>Get Book</source>
+        <target>पुस्तक प्राप्त करें</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.html</context>
           <context context-type="linenumber">17,18</context>
@@ -196,6 +228,7 @@
       </trans-unit>
       <trans-unit id="8716684644010349770" datatype="html">
         <source>Get Books In Pages</source>
+        <target>पृष्ठों में पुस्तकें प्राप्त करें</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.html</context>
           <context context-type="linenumber">18,19</context>
@@ -203,6 +236,7 @@
       </trans-unit>
       <trans-unit id="630321243301960203" datatype="html">
         <source>Add Book </source>
+        <target>पुस्तक जोड़ें</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.html</context>
           <context context-type="linenumber">19,20</context>
@@ -210,6 +244,7 @@
       </trans-unit>
       <trans-unit id="6918911976456652983" datatype="html">
         <source>Bulk Upload</source>
+        <target>सामूहिक अपलोड</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.html</context>
           <context context-type="linenumber">20,21</context>
@@ -217,6 +252,7 @@
       </trans-unit>
       <trans-unit id="1251818871875140514" datatype="html">
         <source>Update Book</source>
+        <target>अद्यतन पुस्तक</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.html</context>
           <context context-type="linenumber">21,22</context>
@@ -224,6 +260,7 @@
       </trans-unit>
       <trans-unit id="6674381155433981562" datatype="html">
         <source>Delete Books</source>
+        <target>पुस्तकें हटाएँ</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.html</context>
           <context context-type="linenumber">22,23</context>
@@ -231,6 +268,7 @@
       </trans-unit>
       <trans-unit id="7279665744348164307" datatype="html">
         <source>Time out</source>
+        <target>समय समाप्त</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
           <context context-type="linenumber">42</context>
@@ -238,6 +276,7 @@
       </trans-unit>
       <trans-unit id="8582110795900667509" datatype="html">
         <source>Invalid token:</source>
+        <target>अमान्य टोकन:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
           <context context-type="linenumber">48</context>
@@ -245,6 +284,7 @@
       </trans-unit>
       <trans-unit id="3249513483374643425" datatype="html">
         <source>Add</source>
+        <target>जोड़ना</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
           <context context-type="linenumber">62</context>
@@ -252,6 +292,7 @@
       </trans-unit>
       <trans-unit id="6135502367947331031" datatype="html">
         <source>Error from server: </source>
+        <target>सर्वर से त्रुटि:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
           <context context-type="linenumber">73</context>
@@ -283,6 +324,7 @@
       </trans-unit>
       <trans-unit id="7022070615528435141" datatype="html">
         <source>Delete</source>
+        <target>मिटाना</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
           <context context-type="linenumber">103</context>
@@ -290,6 +332,7 @@
       </trans-unit>
       <trans-unit id="4021752662928002901" datatype="html">
         <source>Update</source>
+        <target>अद्यतन</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
           <context context-type="linenumber">107</context>
@@ -297,6 +340,7 @@
       </trans-unit>
       <trans-unit id="6542283139659606573" datatype="html">
         <source>Get</source>
+        <target>पाना</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
           <context context-type="linenumber">115</context>
@@ -304,6 +348,7 @@
       </trans-unit>
       <trans-unit id="6932865105766151309" datatype="html">
         <source>Upload</source>
+        <target>डालना</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-file/user-file.component.html</context>
           <context context-type="linenumber">6,7</context>
@@ -311,6 +356,7 @@
       </trans-unit>
       <trans-unit id="1974879939551315191" datatype="html">
         <source>Uploaded Successfully</source>
+        <target>सफलतापूर्वक अपलोड किया गया</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-file/user-file.component.ts</context>
           <context context-type="linenumber">37</context>
@@ -318,6 +364,7 @@
       </trans-unit>
       <trans-unit id="9217262512715899947" datatype="html">
         <source>CSV header not match any property in the Item class.</source>
+        <target>सीएसवी हेडर आइटम वर्ग में किसी भी संपत्ति से मेल नहीं खाता</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-file/user-file.component.ts</context>
           <context context-type="linenumber">45</context>
@@ -325,6 +372,7 @@
       </trans-unit>
       <trans-unit id="3791470212132012603" datatype="html">
         <source>File is empty.</source>
+        <target>फ़ाइल खाली है.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-file/user-file.component.ts</context>
           <context context-type="linenumber">48</context>
@@ -332,6 +380,7 @@
       </trans-unit>
       <trans-unit id="7726959474704000772" datatype="html">
         <source>Book Id:</source>
+        <target>बुक आईडी:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-id/user-id.component.html</context>
           <context context-type="linenumber">5,6</context>
@@ -343,6 +392,7 @@
       </trans-unit>
       <trans-unit id="1923424242265259656" datatype="html">
         <source>Book Retrieved Successfully</source>
+        <target>पुस्तक सफलतापूर्वक पुनर्प्राप्त की गई</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-id/user-id.component.ts</context>
           <context context-type="linenumber">40</context>
@@ -350,6 +400,7 @@
       </trans-unit>
       <trans-unit id="2488492753780221097" datatype="html">
         <source>The book doesn&apos;t exist</source>
+        <target>किताब मौजूद नहीं है</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-id/user-id.component.ts</context>
           <context context-type="linenumber">49</context>
@@ -357,6 +408,7 @@
       </trans-unit>
       <trans-unit id="2376117736449277123" datatype="html">
         <source>Book Deleted Successfully</source>
+        <target>पुस्तक सफलतापूर्वक हटा दी गई</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-id/user-id.component.ts</context>
           <context context-type="linenumber">58</context>
@@ -364,6 +416,7 @@
       </trans-unit>
       <trans-unit id="2022668113070439443" datatype="html">
         <source>The book doesn&apos;t exist.</source>
+        <target>किताब मौजूद नहीं है.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-id/user-id.component.ts</context>
           <context context-type="linenumber">66</context>
@@ -371,6 +424,7 @@
       </trans-unit>
       <trans-unit id="4949138215744740262" datatype="html">
         <source>Book Name:</source>
+        <target>पुस्तक का नाम:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-input/user-input.component.html</context>
           <context context-type="linenumber">10,11</context>
@@ -378,6 +432,7 @@
       </trans-unit>
       <trans-unit id="5359400163132016020" datatype="html">
         <source>Book Author:</source>
+        <target>पुस्तक लेखक:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-input/user-input.component.html</context>
           <context context-type="linenumber">15,16</context>
@@ -385,6 +440,7 @@
       </trans-unit>
       <trans-unit id="8919609940414502848" datatype="html">
         <source>Number of Books:</source>
+        <target>पुस्तकों की संख्या:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-input/user-input.component.html</context>
           <context context-type="linenumber">20,21</context>
@@ -392,6 +448,7 @@
       </trans-unit>
       <trans-unit id="2160195252594102717" datatype="html">
         <source>Price:</source>
+        <target>कीमत:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-input/user-input.component.html</context>
           <context context-type="linenumber">25,26</context>
@@ -399,6 +456,7 @@
       </trans-unit>
       <trans-unit id="5396690522886111874" datatype="html">
         <source>All fields are requied</source>
+        <target>सभी फ़ील्ड आवश्यक हैं</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-input/user-input.component.ts</context>
           <context context-type="linenumber">50</context>
@@ -410,6 +468,7 @@
       </trans-unit>
       <trans-unit id="1030728986040819142" datatype="html">
         <source>Added Successfully</source>
+        <target>सफलतापूर्वक जोड़ा गया</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-input/user-input.component.ts</context>
           <context context-type="linenumber">55</context>
@@ -417,6 +476,7 @@
       </trans-unit>
       <trans-unit id="8134238192136462131" datatype="html">
         <source>Updated Successfully</source>
+        <target>सफलतापूर्वक अपडेट किया गया</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-input/user-input.component.ts</context>
           <context context-type="linenumber">83</context>
@@ -424,6 +484,7 @@
       </trans-unit>
       <trans-unit id="5619129924807025238" datatype="html">
         <source>The book doesn&apos;t exist.&quot;</source>
+        <target>किताब मौजूद नहीं है.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-input/user-input.component.ts</context>
           <context context-type="linenumber">98</context>
@@ -431,6 +492,7 @@
       </trans-unit>
       <trans-unit id="4743002849260529978" datatype="html">
         <source>Items per page:</source>
+        <target>आइटम प्रति पेज:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-pages/user-pages.component.html</context>
           <context context-type="linenumber">23,24</context>
@@ -438,6 +500,7 @@
       </trans-unit>
       <trans-unit id="4452427314943113135" datatype="html">
         <source>Previous</source>
+        <target>पहले का</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-pages/user-pages.component.html</context>
           <context context-type="linenumber">29,30</context>
@@ -445,6 +508,7 @@
       </trans-unit>
       <trans-unit id="6453098595803131790" datatype="html">
         <source>Page <x id="INTERPOLATION" equiv-text="{{currentPage}}"/> of <x id="INTERPOLATION_1" equiv-text="{{totalPages}}"/></source>
+        <target>पृष्ठ</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-pages/user-pages.component.html</context>
           <context context-type="linenumber">30,31</context>
@@ -452,6 +516,7 @@
       </trans-unit>
       <trans-unit id="3885497195825665706" datatype="html">
         <source>Next</source>
+        <target>अगला</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-pages/user-pages.component.html</context>
           <context context-type="linenumber">31,32</context>

@@ -3,6 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FunctionsService } from './functions.service'; 
 import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -15,20 +16,20 @@ export class FunctionsComponent implements OnInit
  {
   message!: string;
   role: any;
-  constructor(private functionsService:FunctionsService,private router: Router,public jwtHelper: JwtHelperService){}
+  constructor(private functionsService:FunctionsService,private router: Router,public jwtHelper: JwtHelperService,private route: ActivatedRoute){}
   public isFunction="";
   public buttonName="";
   public getJsonValue: any;
   username: string = '';
 
   ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {
+      this.username = params['name'];
+      console.log(this.username);
+   });
     const token = localStorage.getItem('authToken');
     if (token) {
       try {
-        const decodedToken = this.jwtHelper.decodeToken(token);
-        this.username = decodedToken.username; 
-        this.role=decodedToken.role;
-  
         if (this.jwtHelper.isTokenExpired(token)) {
           localStorage.removeItem("authToken");
           this.router.navigate(['/authentication']);
@@ -93,9 +94,7 @@ export class FunctionsComponent implements OnInit
 
       
     }
-    
-    
-    
+
     getBooksInPages() {
        this.isFunction="GetInPages";   
     }
@@ -114,6 +113,18 @@ export class FunctionsComponent implements OnInit
     getBook() {
       this.buttonName=$localize`Get`
       this.isFunction="Get";      
+    }
+    deleteUser() {
+      this.isFunction="deleteUser";
+    }
+    getUserByUsername() {
+      this.isFunction="getUserByUsername";
+    }
+    getUserById() {
+      this.isFunction="getUserById";
+    }
+    getUsers() {
+      this.isFunction="getUsers";
     }
  
 }
