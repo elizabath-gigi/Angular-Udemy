@@ -23,6 +23,10 @@
           <context context-type="sourcefile">src/app/authentication/authentication.component.html</context>
           <context context-type="linenumber">48,49</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/get-user/get-user.component.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="6865009229971482891" datatype="html">
         <source>Password:</source>
@@ -115,7 +119,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.ts</context>
-          <context context-type="linenumber">158</context>
+          <context context-type="linenumber">170</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3713449669435436942" datatype="html">
@@ -164,14 +168,14 @@
         <source>Login Failed.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.ts</context>
-          <context context-type="linenumber">148</context>
+          <context context-type="linenumber">159</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6437248547439878735" datatype="html">
         <source>Password Reset Failed.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.ts</context>
-          <context context-type="linenumber">175</context>
+          <context context-type="linenumber">187</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7104142794096645804" datatype="html">
@@ -244,7 +248,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
-          <context context-type="linenumber">43</context>
+          <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8582110795900667509" datatype="html">
@@ -255,7 +259,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
-          <context context-type="linenumber">49</context>
+          <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6135502367947331031" datatype="html">
@@ -266,7 +270,23 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
-          <context context-type="linenumber">74</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
+          <context context-type="linenumber">135</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/get-user/get-user.component.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/get-user/get-user.component.ts</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/get-user/get-user.component.ts</context>
+          <context context-type="linenumber">88</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-file/user-file.component.ts</context>
@@ -301,7 +321,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
-          <context context-type="linenumber">114</context>
+          <context context-type="linenumber">113</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5573521891741907372" datatype="html">
@@ -366,26 +386,91 @@
           <context context-type="sourcefile">src/app/functions/functions.component.html</context>
           <context context-type="linenumber">28,29</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
+          <context context-type="linenumber">118</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="3249513483374643425" datatype="html">
         <source>Add</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
-          <context context-type="linenumber">63</context>
+          <context context-type="linenumber">62</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7022070615528435141" datatype="html">
         <source>Delete</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
-          <context context-type="linenumber">102</context>
+          <context context-type="linenumber">101</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4021752662928002901" datatype="html">
         <source>Update</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
-          <context context-type="linenumber">106</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5092088096434482513" datatype="html">
+        <source>Get User</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
+          <context context-type="linenumber">122</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
+          <context context-type="linenumber">126</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7458435101565858926" datatype="html">
+        <source>User Id:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/get-user/get-user.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6979106625855973778" datatype="html">
+        <source>User Retrieved Successfully</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/get-user/get-user.component.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/get-user/get-user.component.ts</context>
+          <context context-type="linenumber">85</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5419882890152400763" datatype="html">
+        <source>The user doesn&apos;t exist</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/get-user/get-user.component.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/get-user/get-user.component.ts</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4825788241633272384" datatype="html">
+        <source>User Deleted Successfully</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/get-user/get-user.component.ts</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8155981036524450398" datatype="html">
+        <source>The user doesn&apos;t exist or is already deleted.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/get-user/get-user.component.ts</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5150760363452478023" datatype="html">
+        <source>The user found is an Admin, delete failed.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/get-user/get-user.component.ts</context>
+          <context context-type="linenumber">73</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6932865105766151309" datatype="html">

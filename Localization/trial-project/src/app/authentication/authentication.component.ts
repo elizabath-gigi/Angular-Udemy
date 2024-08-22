@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from './authentication.service';
 import { LoginDto } from './loginDto';
-import { User } from './user.model';
 import { Router } from '@angular/router';
 import { ResetDto } from './resetDto';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { User } from './user.model';
 
 
 @Component({

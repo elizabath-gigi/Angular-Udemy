@@ -25,6 +25,10 @@
           <context context-type="sourcefile">src/app/authentication/authentication.component.html</context>
           <context context-type="linenumber">48,49</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/get-user/get-user.component.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="6865009229971482891" datatype="html">
         <source>Password:</source>
@@ -40,7 +44,7 @@
       </trans-unit>
       <trans-unit id="6631334172623029500" datatype="html">
         <source>Email:</source>
-         <target>ईमेल:</target>
+        <target>ईमेल:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.html</context>
           <context context-type="linenumber">14,15</context>
@@ -127,7 +131,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.ts</context>
-          <context context-type="linenumber">158</context>
+          <context context-type="linenumber">170</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3713449669435436942" datatype="html">
@@ -183,7 +187,7 @@
         <target>लॉगिन विफल</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.ts</context>
-          <context context-type="linenumber">148</context>
+          <context context-type="linenumber">159</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6437248547439878735" datatype="html">
@@ -191,7 +195,7 @@
         <target>पासवर्ड रीसेट विफल</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/authentication/authentication.component.ts</context>
-          <context context-type="linenumber">175</context>
+          <context context-type="linenumber">187</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7104142794096645804" datatype="html">
@@ -271,7 +275,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
-          <context context-type="linenumber">43</context>
+          <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8582110795900667509" datatype="html">
@@ -283,11 +287,11 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
-          <context context-type="linenumber">49</context>
+          <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6135502367947331031" datatype="html">
-        <source>Error from server: </source>
+        <source>Error from server:</source>
         <target>सर्वर से त्रुटि:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions-user/functions-user.component.ts</context>
@@ -295,7 +299,23 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
-          <context context-type="linenumber">74</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
+          <context context-type="linenumber">135</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/get-user/get-user.component.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/get-user/get-user.component.ts</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/get-user/get-user.component.ts</context>
+          <context context-type="linenumber">88</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-file/user-file.component.ts</context>
@@ -331,7 +351,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
-          <context context-type="linenumber">114</context>
+          <context context-type="linenumber">113</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5573521891741907372" datatype="html">
@@ -352,7 +372,7 @@
       </trans-unit>
       <trans-unit id="6918911976456652983" datatype="html">
         <source>Bulk Upload</source>
-         <target>सामूहिक अपलोड</target>
+        <target>थोक अपलोड</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.html</context>
           <context context-type="linenumber">20,21</context>
@@ -368,7 +388,7 @@
       </trans-unit>
       <trans-unit id="8161968689252575413" datatype="html">
         <source>Delete Book</source>
-        <target>पुस्तकें हटाएँ</target>
+        <target>पुस्तक हटाएँ</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.html</context>
           <context context-type="linenumber">22,23</context>
@@ -405,13 +425,17 @@
           <context context-type="sourcefile">src/app/functions/functions.component.html</context>
           <context context-type="linenumber">28,29</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
+          <context context-type="linenumber">118</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="3249513483374643425" datatype="html">
         <source>Add</source>
         <target>जोड़ना</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
-          <context context-type="linenumber">63</context>
+          <context context-type="linenumber">62</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7022070615528435141" datatype="html">
@@ -419,7 +443,7 @@
         <target>मिटाना</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
-          <context context-type="linenumber">102</context>
+          <context context-type="linenumber">101</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4021752662928002901" datatype="html">
@@ -427,12 +451,80 @@
         <target>अद्यतन</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
-          <context context-type="linenumber">106</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5092088096434482513" datatype="html">
+        <source>Get User</source>
+        <target>उपयोगकर्ता प्राप्त करें</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
+          <context context-type="linenumber">122</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/functions.component.ts</context>
+          <context context-type="linenumber">126</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7458435101565858926" datatype="html">
+        <source>User Id:</source>
+        <target>उपयोगकर्ता पहचान:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/get-user/get-user.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6979106625855973778" datatype="html">
+        <source>User Retrieved Successfully</source>
+        <target>उपयोगकर्ता सफलतापूर्वक पुनर्प्राप्त किया गया</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/get-user/get-user.component.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/get-user/get-user.component.ts</context>
+          <context context-type="linenumber">85</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5419882890152400763" datatype="html">
+        <source>The user doesn&apos;t exist</source>
+        <target>उपयोगकर्ता मौजूद नहीं है</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/get-user/get-user.component.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/get-user/get-user.component.ts</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4825788241633272384" datatype="html">
+        <source>User Deleted Successfully</source>
+        <target>उपयोगकर्ता सफलतापूर्वक हटा दिया गया</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/get-user/get-user.component.ts</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8155981036524450398" datatype="html">
+        <source>The user doesn&apos;t exist or is already deleted.</source>
+        <target>उपयोगकर्ता मौजूद नहीं है</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/get-user/get-user.component.ts</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5150760363452478023" datatype="html">
+        <source>The user found is an Admin, delete failed.</source>
+        <target>पाया गया उपयोगकर्ता एक व्यवस्थापक है, हटाना विफल रहा</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/functions/get-user/get-user.component.ts</context>
+          <context context-type="linenumber">73</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6932865105766151309" datatype="html">
         <source>Upload</source>
-        <target>डालना</target>
+        <target>अपलोड करें</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-file/user-file.component.html</context>
           <context context-type="linenumber">6,7</context>
@@ -448,7 +540,7 @@
       </trans-unit>
       <trans-unit id="9217262512715899947" datatype="html">
         <source>CSV header not match any property in the Item class.</source>
-        <target>सीएसवी हेडर आइटम वर्ग में किसी भी संपत्ति से मेल नहीं खाता</target>
+        <target>सीएसवी हेडर आइटम वर्ग की किसी भी संपत्ति से मेल नहीं खाता</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-file/user-file.component.ts</context>
           <context context-type="linenumber">45</context>
@@ -456,7 +548,7 @@
       </trans-unit>
       <trans-unit id="3791470212132012603" datatype="html">
         <source>File is empty.</source>
-         <target>फ़ाइल खाली है.</target>
+        <target>फ़ाइल खाली है</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-file/user-file.component.ts</context>
           <context context-type="linenumber">48</context>
@@ -492,7 +584,7 @@
       </trans-unit>
       <trans-unit id="2376117736449277123" datatype="html">
         <source>Book Deleted Successfully</source>
-         <target>पुस्तक सफलतापूर्वक हटा दी गई</target>
+        <target>पुस्तक सफलतापूर्वक हटा दी गई</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-id/user-id.component.ts</context>
           <context context-type="linenumber">58</context>
@@ -500,7 +592,7 @@
       </trans-unit>
       <trans-unit id="2022668113070439443" datatype="html">
         <source>The book doesn&apos;t exist.</source>
-        <target>किताब मौजूद नहीं है.</target>
+        <target>किताब मौजूद नहीं है</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-id/user-id.component.ts</context>
           <context context-type="linenumber">66</context>
@@ -516,7 +608,7 @@
       </trans-unit>
       <trans-unit id="5359400163132016020" datatype="html">
         <source>Book Author:</source>
-        <target>पुस्तक लेखक:</target>
+        <target>स्तक लेखक:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-input/user-input.component.html</context>
           <context context-type="linenumber">15,16</context>
@@ -532,7 +624,7 @@
       </trans-unit>
       <trans-unit id="2160195252594102717" datatype="html">
         <source>Price:</source>
-        <target>कीमत:</target>
+        <target>कीमत</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-input/user-input.component.html</context>
           <context context-type="linenumber">25,26</context>
@@ -568,7 +660,7 @@
       </trans-unit>
       <trans-unit id="5619129924807025238" datatype="html">
         <source>The book doesn&apos;t exist.&quot;</source>
-        <target>किताब मौजूद नहीं है.</target>
+        <target>किताब मौजूद नहीं है</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-input/user-input.component.ts</context>
           <context context-type="linenumber">98</context>
@@ -576,7 +668,7 @@
       </trans-unit>
       <trans-unit id="4743002849260529978" datatype="html">
         <source>Items per page:</source>
-        <target>आइटम प्रति पेज:</target>
+        <target>प्रति पृष्ठ आइटम:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-pages/user-pages.component.html</context>
           <context context-type="linenumber">23,24</context>
@@ -592,7 +684,7 @@
       </trans-unit>
       <trans-unit id="6453098595803131790" datatype="html">
         <source>Page <x id="INTERPOLATION" equiv-text="{{currentPage}}"/> of <x id="INTERPOLATION_1" equiv-text="{{totalPages}}"/></source>
-        <target>पृष्ठ</target>
+        <target>पेज</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/functions/user-pages/user-pages.component.html</context>
           <context context-type="linenumber">30,31</context>

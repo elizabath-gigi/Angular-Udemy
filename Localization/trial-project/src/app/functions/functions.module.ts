@@ -18,6 +18,8 @@ import { UserPagesComponent } from './user-pages/user-pages.component';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { UserFileComponent } from "./user-file/user-file.component";
 import { JWT_OPTIONS, JwtHelperService, JwtModule } from "@auth0/angular-jwt";
+import { GetUsersComponent } from "./get-users/get-users.component";
+import { GetUserComponent } from "./get-user/get-user.component";
 
 
 // export function tokenGetter(): string | undefined {
@@ -35,7 +37,9 @@ import { JWT_OPTIONS, JwtHelperService, JwtModule } from "@auth0/angular-jwt";
     UserTableComponent,
     UserPagesComponent,
     UserFileComponent,
-    FunctionsUserComponent
+    FunctionsUserComponent,
+    GetUsersComponent,
+    GetUserComponent
   ],
   imports: [
     HttpClientModule,

@@ -15,7 +15,7 @@ export class MessageComponent {
       this.displayMessage = this.message;
       setTimeout(() => {
         this.displayMessage = null;
-      }, 2000); // Display message for 2 seconds
+      }, 2000);
     }
   }
 }

@@ -15,37 +15,29 @@ export class FunctionsService
     }
     getUsers(): Observable<any>
     {
-      //   this.http.get('https://localhost:7220/api/Library/getBooks').subscribe((data) => {
-      //   this.getJsonValue = data;
-      //   console.log('inside service',this.getJsonValue);
-      //   return (this.getJsonValue);
-      // });
-       return this.http.get('https://localhost:7254/Library/getBooks')   
+      
+       return this.http.get('https://localhost:7261/Admin/getUsers')   
     }
-    getUserById(): Observable<any>
+    getUserById(UserId:number): Observable<any>
     {
-      //   this.http.get('https://localhost:7220/api/Library/getBooks').subscribe((data) => {
-      //   this.getJsonValue = data;
-      //   console.log('inside service',this.getJsonValue);
-      //   return (this.getJsonValue);
-      // });
-       return this.http.get('https://localhost:7254/Library/getBooks')   
+      const header=new HttpHeaders({
+        contentsType:"application/json"
+      })
+       return this.http.get(`https://localhost:7261/Admin/getUserById?UserId=${UserId}`,{headers:header})   
     }
-    getUserByUsername(): Observable<any>
+    getUserByUsername(Username:string): Observable<any>
     {
-      //   this.http.get('https://localhost:7220/api/Library/getBooks').subscribe((data) => {
-      //   this.getJsonValue = data;
-      //   console.log('inside service',this.getJsonValue);
-      //   return (this.getJsonValue);
-      // });
-       return this.http.get('https://localhost:7254/Library/getBooks')   
+      const header=new HttpHeaders({
+        contentsType:"application/json"
+      })
+       return this.http.get(`https://localhost:7261/Admin/getUserByUsername?UserName=${Username}`,{headers:header}) 
     }
-    deleteUser(bookId:number)
+    deleteUser(Username:string)
     {
         const header=new HttpHeaders({
             contentsType:"application/json"
           })
-          return this.http.delete(`https://localhost:7254/Library/deleteBook?id=${bookId}`,{headers:header})    
+          return this.http.delete(`https://localhost:7261/Admin/deleteUser?UserName=${Username}`,{headers:header})    
     }
     getBooks(): Observable<any>
     {

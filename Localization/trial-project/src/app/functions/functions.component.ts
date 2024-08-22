@@ -5,7 +5,6 @@ import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { ActivatedRoute } from '@angular/router';
 
-
 @Component({
   selector: 'app-functions',
   templateUrl: './functions.component.html',
@@ -115,16 +114,33 @@ export class FunctionsComponent implements OnInit
       this.isFunction="Get";      
     }
     deleteUser() {
-      this.isFunction="deleteUser";
+      this.isFunction="DeleteUser";
+      this.buttonName=$localize`Delete User`;
     }
     getUserByUsername() {
-      this.isFunction="getUserByUsername";
+      this.isFunction="GetUserByUsername";
+      this.buttonName=$localize`Get User`;
     }
     getUserById() {
-      this.isFunction="getUserById";
+      this.isFunction="GetUserById";
+      this.buttonName=$localize`Get User`;
     }
     getUsers() {
-      this.isFunction="getUsers";
+      this.functionsService.getUsers().subscribe({
+        next: (data) => {
+          this.isFunction="GetUsers";
+          this.getJsonValue = data;
+        },
+        error: (error) => {
+          console.error($localize`Error from server: `, error);
+          
+          // Extract the custom error message from the backend
+          const errorMessage = error.error;
+          this.message=errorMessage;
+          //alert(errorMessage);
+          console.log(errorMessage);
+        }
+      });
     }
  
 }

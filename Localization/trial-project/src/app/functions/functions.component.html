@@ -36,6 +36,10 @@
     <div class="books">
         <app-user-table *ngIf="isFunction==='GetBooks'" [getJsonValue]="getJsonValue"/>
     </div>
+    <app-get-users *ngIf="isFunction==='GetUsers'" [getJsonValue]="getJsonValue"/>
+    <app-get-user *ngIf="isFunction === 'GetUserById'" [buttonName]="buttonName" [isFunction]="isFunction"/>
+    <app-get-user *ngIf="isFunction === 'GetUserByUsername'" [buttonName]="buttonName" [isFunction]="isFunction"/>
+    <app-get-user *ngIf="isFunction === 'DeleteUser'" [buttonName]="buttonName" [isFunction]="isFunction"/>
     <app-message *ngIf="message!=null" [message]=message/>
 
 

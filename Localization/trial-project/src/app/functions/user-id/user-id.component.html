@@ -8,7 +8,7 @@
       <button type="submit">{{buttonName}}</button>
     </form>
     <app-message *ngIf="message" [message]="message"></app-message>
-    <form *ngIf="postJsonValue != null && buttonName === 'Get'">
+    <form *ngIf="postJsonValue != null && isFunction === 'Get'">
       <div *ngIf="entries.length > 0">
         <div *ngFor="let entry of entries">
           <p>{{ entry[0] }}: {{ entry[1] }}</p>
@@ -17,7 +17,6 @@
     </form>
   </dialog>
 </div>
-
   
   
    

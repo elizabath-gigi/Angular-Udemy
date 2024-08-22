@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FunctionsService } from '../functions.service'; 
 import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-functions-user',
   standalone: false,
@@ -12,18 +13,22 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 export class FunctionsUserComponent implements OnInit{
   message!: string;
   role: any;
-  constructor(private functionsService:FunctionsService,private router: Router,public jwtHelper: JwtHelperService){}
+  constructor(private functionsService:FunctionsService,private router: Router,public jwtHelper: JwtHelperService,private route: ActivatedRoute){}
   public isFunction="";
   public buttonName="";
   public getJsonValue: any;
   username: string = '';
 
   ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {
+      this.username = params['name'];
+      console.log(this.username);
+   });
     const token = localStorage.getItem('authToken');
     if (token) {
       try {
-        const decodedToken = this.jwtHelper.decodeToken(token);
-        this.username = decodedToken.username; 
+        // const decodedToken = this.jwtHelper.decodeToken(token);
+        // this.username = decodedToken.username; 
         //this.role=decodedToken.role;
   
         if (this.jwtHelper.isTokenExpired(token)) {
@@ -77,7 +82,7 @@ export class FunctionsUserComponent implements OnInit{
     this.isFunction="GetInPages";   
   }
   getBook() {
-    this.buttonName=$localize`Get`
+    this.buttonName=$localize`Get`;
     this.isFunction="Get";      
   }
 }
