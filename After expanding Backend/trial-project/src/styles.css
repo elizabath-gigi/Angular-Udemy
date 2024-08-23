@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    height: 100%;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background:  #5F9EA0;
+    /*color: #c3b3d8;*/
+    height: 100%;
+  }
+/* html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */

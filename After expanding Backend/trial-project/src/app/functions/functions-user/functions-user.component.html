@@ -1,0 +1,27 @@
+<div >
+    <div class="header">
+        
+        <div class="title">
+            <h1 i18n>Library Management</h1>
+        </div>
+        <div class="greeting">
+            <h5><span i18n>Hi</span> {{username}}</h5>
+        </div>
+        <div class="logout">
+            <a i18n (click)="logout()">Logout</a>
+        </div>
+        
+    </div>
+    <div class="buttons">
+        <button i18n (click)="getBooks()">Get Books </button>
+        <button i18n (click)="getBook()">Get Book</button>
+        <button i18n (click)="getBooksInPages()">Get Books In Pages</button>
+        
+    </div>
+    
+    <app-user-id *ngIf="isFunction === 'Get'" [buttonName]="buttonName" [isFunction]="isFunction"/>
+    <app-user-pages *ngIf="isFunction==='GetInPages'"/>
+    <div class="books">
+        <app-user-table *ngIf="isFunction==='GetBooks'" [getJsonValue]="getJsonValue"/>
+    </div>
+    <app-message *ngIf="message!=null" [message]=message/>

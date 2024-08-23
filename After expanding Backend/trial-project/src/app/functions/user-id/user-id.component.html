@@ -1,0 +1,43 @@
+<div class="popup">
+  <dialog open>
+    <form class="form-container" #popupForm="ngForm" (ngSubmit)="userInput()">
+      <div>
+        <label i18n for="bookId">Book Id:</label>
+        <input
+          id="bookId"
+          [(ngModel)]="bookId"
+          name="bookId"
+          required
+          #bookIdInput="ngModel"
+        />
+      </div>
+      <button type="submit">{{ buttonName }}</button>
+    </form>
+
+    <!-- Message Component to Display Success/Error Messages -->
+    <app-message *ngIf="message" [message]="message"></app-message>
+
+    <!-- Form to Display Book Information -->
+    <form *ngIf="postJsonValue != null && isFunction === 'GetBookById'">
+
+      <!-- Display Book Image if Available -->
+      <div *ngIf="postJsonValue.bookImage">
+        <img
+          [src]="postJsonValue.bookImage"
+          alt="Book Image"
+          class="book-image"
+        />
+      </div>
+
+      <!-- Display Book Details Excluding Book Image -->
+      <div *ngIf="entries.length > 0">
+        <div *ngFor="let entry of entries">
+          <p *ngIf="entry[0] !== 'bookImage'">
+            <strong>{{ entry[0] }}:</strong> {{ entry[1] }}
+          </p>
+        </div>
+      </div>
+
+    </form>
+  </dialog>
+</div>

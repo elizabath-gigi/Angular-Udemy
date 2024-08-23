@@ -1,0 +1,15 @@
+<div class="upload-container">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="file-input-container">
+            <input type="file" (change)="onFileSelected($event)" required />
+        </div>
+        <button i18n type="submit">Upload</button>
+        <app-message *ngIf="message!= null" [message]="message"/>
+        <!-- <div *ngIf="uploadProgress !== null" class="progress-container">
+            Upload Progress: {{ uploadProgress }}%
+            <div class="progress-bar">
+                <div class="progress" [style.width]="uploadProgress + '%'"></div>
+            </div>
+        </div> -->
+    </form>
+</div>
