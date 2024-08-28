@@ -11,8 +11,10 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './functions-user.component.css'
 })
 export class FunctionsUserComponent implements OnInit{
+
   message!: string;
   role: any;
+  page: string="";
   constructor(private functionsService:FunctionsService,private router: Router,public jwtHelper: JwtHelperService,private route: ActivatedRoute){}
   public isFunction="";
   public buttonName="";
@@ -24,13 +26,14 @@ export class FunctionsUserComponent implements OnInit{
       this.username = params['name'];
       console.log(this.username);
    });
+
     const token = localStorage.getItem('authToken');
     if (token) {
       try {
         // const decodedToken = this.jwtHelper.decodeToken(token);
         // this.username = decodedToken.username; 
         //this.role=decodedToken.role;
-  
+        this.getBooks();
         if (this.jwtHelper.isTokenExpired(token)) {
           localStorage.removeItem("authToken");
           this.router.navigate(['/authentication']);
@@ -58,6 +61,16 @@ export class FunctionsUserComponent implements OnInit{
   logout(): void {
     localStorage.removeItem('authToken');
     this.router.navigate(['/authentication']);
+  }
+  onBorrowClick() {
+    this.page="Borrow";
+  }
+  onCartClick() {
+    this.page="Cart";
+  }
+  onClose()
+  {
+    this.page="";
   }
   public getBooks()
     {

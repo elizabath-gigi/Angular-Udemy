@@ -20,7 +20,7 @@ export class UserPagesComponent implements OnInit {
   ngOnInit(): void {
     this.functionsService.getBooks().subscribe(data => {
     this.totalCount = data.length;
-    this.HeaderColumn=Object.keys(data[0]);
+    this.HeaderColumn=['bookId', 'bookName', 'bookAuthor', 'noOfBook', 'price'];
     this.loadBooks(this.currentPage, this.pageSize);
     });
   }

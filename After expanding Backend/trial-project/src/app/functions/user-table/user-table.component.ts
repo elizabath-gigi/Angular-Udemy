@@ -11,7 +11,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 })
 export class UserTableComponent implements OnInit{
   @Input({required:true}) getJsonValue!:any;
-   displayedColumns: string[] = ['bookId', 'bookName', 'bookAuthor', 'noOfBook', 'price'];
+   displayedColumns: string[] = ['bookId', 'bookName', 'bookAuthor', 'noOfBook', 'price','bookImage'];
    dataSource!: MatTableDataSource<any>;
 
    ngOnInit(): void {

@@ -100,6 +100,10 @@ export class FunctionsComponent implements OnInit
       this.buttonName=$localize`Get`
       this.isFunction="GetBookById";      
     }
+    getBookByName() {
+      this.buttonName=$localize`Get`
+      this.isFunction="GetBookByName";      
+    }
     deleteUser() {
       this.isFunction="DeleteUser";
       this.buttonName=$localize`Delete User`;

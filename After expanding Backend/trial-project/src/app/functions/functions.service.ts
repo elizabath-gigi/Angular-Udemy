@@ -77,6 +77,15 @@ export class FunctionsService
         return this.http.get(`https://localhost:7254/Library/getBook?id=${bookId}`,{headers:header})
          
     }
+    getBookByName(bookName:string):Observable<any>
+    {
+       
+        const header=new HttpHeaders({
+              contentsType:"application/json"
+            })
+        return this.http.get(`https://localhost:7254/Library/getByBookName?BookName=${bookName}`,{headers:header})
+         
+    }
     deleteBook(bookId:number)
     {
         const header=new HttpHeaders({
@@ -108,5 +117,44 @@ export class FunctionsService
     {
        return this.http.get('https://localhost:7261/getAllBorrows')   
     }
-
+    getUserBorrows(): Observable<any>
+    {
+       return this.http.get('https://localhost:7261/getUserBorrows')   
+    }
+    ViewCartItems():Observable<any>
+    {
+       return this.http.get(`https://localhost:7261/ViewCartItems`) 
+    }
+    GetCartValue():Observable<any>
+    {
+       return this.http.get(`https://localhost:7261/GetCartValue`) 
+    }
+    AddToCart(BookName:string): Observable<any>
+    {
+      const header=new HttpHeaders({
+        contentsType:"application/json"
+      })
+       return this.http.post(`https://localhost:7261/AddCartItem?BookName=${BookName}`,{headers:header})   
+    }
+    RemoveFromCart(BookName:string): Observable<any>
+    {
+      const header=new HttpHeaders({
+        contentsType:"application/json"
+      })
+      return this.http.delete(`https://localhost:7261/RemoveCartItem?BookName=${BookName}`,{headers:header})   
+    }
+    BorrowBooks(): Observable<any>
+    {
+      const header=new HttpHeaders({
+        contentsType:"application/json"
+      })
+      return this.http.delete(`https://localhost:7261/BorrowCartItem`,{headers:header}); 
+    }
+    ReturnBook(BookName:string): Observable<any>
+    {
+      const header=new HttpHeaders({
+        contentsType:"application/json"
+      })
+      return this.http.delete(`https://localhost:7261/ReturnBook?BookName=${BookName}`,{headers:header})   
+    }
 }

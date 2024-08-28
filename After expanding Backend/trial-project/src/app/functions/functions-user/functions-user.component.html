@@ -1,27 +1,42 @@
-<div >
+<div class="main-content">
     <div class="header">
-        
         <div class="title">
             <h1 i18n>Library Management</h1>
         </div>
-        <div class="greeting">
-            <h5><span i18n>Hi</span> {{username}}</h5>
+        <div class="user-info">
+            <div class="greeting">
+                <h5><span i18n>Hi</span> {{username}}!</h5>
+            </div>
+            <div class="icons">
+                <!-- Cart Icon -->
+                <a class="icon" (click)="onCartClick()" title="Cart">
+                    <img src="assets/images/cart.png" alt="Cart" width="30" height="30">
+                </a>
+                
+                <!-- Borrow Icon -->
+                <a class="icon" (click)="onBorrowClick()" title="Borrow List">
+                    <img src="assets/images/Borrow.png" alt="Borrow" width="30" height="30">
+                </a>
+            </div>
+            <div class="logout">
+                <a i18n (click)="logout()">Logout</a>
+            </div>
         </div>
-        <div class="logout">
-            <a i18n (click)="logout()">Logout</a>
-        </div>
-        
-    </div>
-    <div class="buttons">
+</div>
+    <app-cart *ngIf="page==='Cart'" (close)="onClose()"></app-cart>
+    <app-borrow *ngIf="page==='Borrow'" (close)="onClose()"></app-borrow>
+    
+    <!-- <div class="buttons">
         <button i18n (click)="getBooks()">Get Books </button>
         <button i18n (click)="getBook()">Get Book</button>
         <button i18n (click)="getBooksInPages()">Get Books In Pages</button>
         
-    </div>
+    </div> -->
     
     <app-user-id *ngIf="isFunction === 'Get'" [buttonName]="buttonName" [isFunction]="isFunction"/>
     <app-user-pages *ngIf="isFunction==='GetInPages'"/>
-    <div class="books">
+    <app-get-books *ngIf="isFunction==='GetBooks'" [getJsonValue]="getJsonValue"/>
+    <!-- <div class="books">
         <app-user-table *ngIf="isFunction==='GetBooks'" [getJsonValue]="getJsonValue"/>
-    </div>
+    </div> -->
     <app-message *ngIf="message!=null" [message]=message/>

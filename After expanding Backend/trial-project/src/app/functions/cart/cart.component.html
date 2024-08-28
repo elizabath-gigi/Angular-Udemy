@@ -1,0 +1,29 @@
+<div class="overlay" (click)="closeCart()"></div>
+<dialog open class="cart-popup">
+    <h2>Cart</h2>
+    <div class="popup-content">
+        <button class="close-btn" (click)="closeCart()">Close</button>
+        <div *ngIf="cartItems && cartItems.length > 0; else noItems">
+            <ul class="cart-list">
+                <li *ngFor="let item of cartItems" class="cart-item">
+                    <div class="item-details">
+                        <span class="book-name">{{ item.bookName }}</span>
+                        <span class="book-price">{{ item.price | currency }}</span>
+                        <button class="remove-btn" (click)="RemoveFromCart(item.bookName)">Remove</button>
+                    </div>
+                </li>
+            </ul>
+            <div class="total-value">
+                <strong>Total Amount: </strong>{{ cartValue | currency }}
+            </div>
+            <div class="borrow-action">
+              <button class="borrow-btn" (click)="BorrowBooks()">Borrow</button>
+          </div>
+        </div>
+        <ng-template #noItems>
+            <p>No items in the cart.</p>
+        </ng-template>
+    </div>
+</dialog>
+
+  

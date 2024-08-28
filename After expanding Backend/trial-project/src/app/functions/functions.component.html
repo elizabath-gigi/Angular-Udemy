@@ -15,6 +15,7 @@
     <div class="buttons">
         <button i18n (click)="getBooks()">Get Books </button>
         <button i18n (click)="getBookById()">Get Book By Id</button>
+        <button i18n (click)="getBookByName()">Get Book By Name</button>
         <button i18n (click)="getBooksInPages()">Get Books In Pages</button>
         <button i18n (click)="onAddBook()">Add Book </button>
         <button i18n (click)="bulkUpload()">Bulk Upload</button>
@@ -32,6 +33,7 @@
     <app-user-input  *ngIf="isFunction === 'Add'" [buttonName]="buttonName" [isFunction]="isFunction"/> 
     <app-user-input  *ngIf="isFunction === 'Update'" [buttonName]="buttonName" [isFunction]="isFunction"/> 
     <app-user-id *ngIf="isFunction === 'GetBookById'" [buttonName]="buttonName" [isFunction]="isFunction"/>
+    <app-user-id *ngIf="isFunction === 'GetBookByName'" [buttonName]="buttonName" [isFunction]="isFunction"/>
     <app-user-id *ngIf="isFunction === 'Delete'" [buttonName]="buttonName" [isFunction]="isFunction"/>
     <app-user-pages *ngIf="isFunction==='GetInPages'"/>
     <app-user-file *ngIf="isFunction==='BulkUpload'"/>

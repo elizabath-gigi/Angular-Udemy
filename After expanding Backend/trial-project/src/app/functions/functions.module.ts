@@ -1,3 +1,4 @@
+
 import { FunctionsService } from "./functions.service";
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
@@ -21,6 +22,9 @@ import { JWT_OPTIONS, JwtHelperService, JwtModule } from "@auth0/angular-jwt";
 import { GetUsersComponent } from "./get-users/get-users.component";
 import { GetUserComponent } from "./get-user/get-user.component";
 import { BorrowlistComponent } from "./borrowlist/borrowlist.component";
+import { GetBooksComponent } from "./get-books/get-books.component";
+import { CartComponent } from "./cart/cart.component";
+import { BorrowComponent } from "./borrow/borrow.component";
 
 
 // export function tokenGetter(): string | undefined {
@@ -41,7 +45,10 @@ import { BorrowlistComponent } from "./borrowlist/borrowlist.component";
     FunctionsUserComponent,
     GetUsersComponent,
     GetUserComponent,
-    BorrowlistComponent
+    BorrowlistComponent,
+    GetBooksComponent,
+    CartComponent,
+    BorrowComponent
   ],
   imports: [
     HttpClientModule,

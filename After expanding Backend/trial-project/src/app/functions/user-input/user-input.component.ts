@@ -70,7 +70,7 @@ export class UserInputComponent {
     }
   }
 
-  // Check if form is valid
+
   private isFormValid(checkId: boolean = false): boolean {
     return this.book.bookName !== '' &&
            this.book.bookAuthor !== '' &&
@@ -79,7 +79,7 @@ export class UserInputComponent {
            (!checkId || this.book.bookId !== 0);
   }
 
-  // Create FormData instance to send via HTTP
+  
   private createFormData(): FormData {
     const formData = new FormData();
     formData.append('bookId', this.book.bookId.toString());
@@ -93,7 +93,7 @@ export class UserInputComponent {
     return formData;
   }
 
-  // Reset form fields
+  
   private resetForm(): void {
     this.book = {
       bookId: 0,

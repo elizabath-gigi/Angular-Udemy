@@ -1,0 +1,53 @@
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.book-tile {
+    border: 1px solid #ddd;
+    background-color: rgb(127, 199, 199);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.book-tile:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.book-name {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.book-author, .book-price, .number-of-books {
+    font-size: 14px;
+    color: #555;
+}
+.btn {
+    background-color: #007B7B;  /* Bootstrap blue color */
+    color: white;
+    border: none;
+    width:80px;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #006666;  /* Darker blue on hover */
+}

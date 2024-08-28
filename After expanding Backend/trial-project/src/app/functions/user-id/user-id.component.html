@@ -1,15 +1,13 @@
 <div class="popup">
   <dialog open>
     <form class="form-container" #popupForm="ngForm" (ngSubmit)="userInput()">
-      <div>
+      <div *ngIf="isFunction=='GetBookById'||isFunction==='Delete'">
         <label i18n for="bookId">Book Id:</label>
-        <input
-          id="bookId"
-          [(ngModel)]="bookId"
-          name="bookId"
-          required
-          #bookIdInput="ngModel"
-        />
+        <input   id="bookId"   [(ngModel)]="bookId"   name="bookId"   required  #bookIdInput="ngModel"/>
+      </div>
+      <div *ngIf="isFunction=='GetBookByName'">
+        <label i18n for="bookName">Book Name:</label>
+        <input   id="bookName"   [(ngModel)]="bookName"   name="bookName"   required  #bookNameInput="ngModel"/>
       </div>
       <button type="submit">{{ buttonName }}</button>
     </form>
@@ -18,7 +16,7 @@
     <app-message *ngIf="message" [message]="message"></app-message>
 
     <!-- Form to Display Book Information -->
-    <form *ngIf="postJsonValue != null && isFunction === 'GetBookById'">
+    <form *ngIf="postJsonValue != null && isFunction === 'GetBookById'||isFunction==='GetBookByName'">
 
       <!-- Display Book Image if Available -->
       <div *ngIf="postJsonValue.bookImage">

@@ -1,0 +1,22 @@
+<div class="overlay" (click)="closeBorrow()"></div>
+<dialog open class="borrow-popup">
+    <h2>Borrow List</h2>
+    <div class="popup-content">
+        <button class="close-btn" (click)="closeBorrow()">Close</button>
+        <div *ngIf="getJsonValue && getJsonValue.length > 0; else noBorrows">
+            <ul class="borrow-list">
+                <li *ngFor="let borrow of getJsonValue" class="borrow-item">
+                    <div class="item-details">
+                        <span class="book-name">{{ borrow.bookName }}</span>
+                        <span class="borrow-date">{{ borrow.borrowDate | date }}</span>
+                        <span class="return-date">{{ borrow.returnDate | date }}</span>
+                        <button class="return-btn" (click)="ReturnBook(borrow.bookName)">Return</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <ng-template #noBorrows>
+            <p>No books have been borrowed.</p>
+        </ng-template>
+    </div>
+</dialog>

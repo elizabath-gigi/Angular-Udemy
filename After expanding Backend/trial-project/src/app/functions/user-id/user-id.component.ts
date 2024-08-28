@@ -17,6 +17,7 @@ export class UserIdComponent {
   @Input({required:true}) buttonName!:string;
   @Input({required:true}) isFunction!:string;
   bookId:number=0;
+  bookName:string="";
   message: any;
   postJsonValue: any;
   userInput()
@@ -26,6 +27,11 @@ export class UserIdComponent {
 
         this.getBookById();
       }
+      if(this.isFunction=="GetBookByName")
+        {
+  
+          this.getBookByName();
+        }
       else if(this.isFunction=="Delete")
       {
         
@@ -33,6 +39,35 @@ export class UserIdComponent {
       }
   
   }
+  getBookByName() {
+    this.functionsService.getBookByName(this.bookName).subscribe({
+      next: data => {
+        this.postJsonValue = data;
+        this.bookId = 0;
+  
+        // Assign book image to a separate property
+        if (this.postJsonValue.bookImage) {
+          this.postJsonValue.bookImage = 'data:image/png;base64,' + this.postJsonValue.bookImage;
+        }
+  
+        // Convert postJsonValue to entries to display other properties
+        this.entries = Object.entries(this.postJsonValue);
+  
+        console.log(this.postJsonValue);
+        this.message = $localize`Book Retrieved Successfully`;
+      },
+      error: error => {
+        console.error($localize`Error from server: `, error);
+        const errorMessage = error.error;
+        this.message = errorMessage;
+        if (errorMessage == "The book doesn't exist") {
+          alert($localize`The book doesn't exist`);
+        }
+      }
+    });
+  }
+    
+  
   getBookById() {
     this.functionsService.getBook(this.bookId).subscribe({
       next: data => {
