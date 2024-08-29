@@ -1,0 +1,20 @@
+<div class="ag-theme-alpine" style="height: 500px; width: 100%;">
+  <ag-grid-angular
+    [rowData]="books"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    [pagination]="true"
+    [paginationPageSize]="paginationPageSize"
+    (gridReady)="onGridReady($event)"
+    (cellValueChanged)="updateBook($event.data)">
+  </ag-grid-angular>
+</div>
+
+<form [formGroup]="bookForm" (ngSubmit)="addBook()">
+  <input formControlName="bookName" placeholder="Book Name" />
+  <input formControlName="noOfBook" type="number" placeholder="Number of Books" />
+  <input formControlName="Price" type="number" placeholder="Price" />
+  <input type="file" (change)="onFileChange($event)" />
+  <button type="submit">Add Book</button>
+</form>
+

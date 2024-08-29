@@ -1,0 +1,10 @@
+<div class="book-list">
+    <div class="book-tile" *ngFor="let book of getJsonValue">
+        <!-- Ensure the Base64 string is prefixed with 'data:image/png;base64,' -->
+        <img [src]="'data:image/png;base64,' + book.bookImage" alt="Book Image" class="book-image">
+        <h2 class="book-name">{{ book.bookName }}</h2>
+        <p class="book-author">Author: {{ book.bookAuthor }}</p>
+        <p class="book-price">Price: ${{ book.price }}</p>
+        <button class="btn" (click)="AddToCart(book.bookName)">Add</button>
+    </div>
+</div>
