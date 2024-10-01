@@ -1,0 +1,25 @@
+::ng-deep  .ng-otp-input-wrapper{
+  display:flex !important;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+ 
+}
+.row{
+  width:100vh;
+  height:60vh;
+}
+h2,h4{
+  font-family:'Platfair';
+}
+h6{
+  font-family: 'Tangerine';
+}
+.box
+{
+  box-shadow: 5px 10px 15px 5px;
+  
+
+}

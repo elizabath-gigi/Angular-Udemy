@@ -1,0 +1,143 @@
+/* Hover Box for enlarged details */
+.card {   
+  width:240px; 
+  height: 350px;  
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3);
+  }
+.hover-box {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 0;
+  width: 400px;
+  height: 350px;
+  background-color: #f8f9fa;
+  box-shadow: 8px 15px 20px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hover-box-content {
+  display: flex;
+  padding: 10px;
+}
+
+.hover-image {
+  flex: 1;
+  padding-right: 10px;
+}
+
+.enlarged-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.hover-details {
+  flex: 2;
+}
+
+.hover-details h5 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.hover-details p {
+  margin-bottom: 5px;
+}
+
+
+.col-sm-6:hover .hover-box {
+  display: block;
+  opacity: 1;
+}
+
+.col-sm-6.position-relative:hover .hover-box {
+  left: calc(100% + 10px);
+}
+
+
+.col-sm-6.position-relative.rightmost:hover .hover-box {
+  left: auto;
+  right: calc(100% + 10px); 
+}
+.btn {
+  background-color: #4d3726  !important; 
+  color: #ffffff; 
+}
+
+.btn:hover {
+  background-color: #8B5E3C  !important; 
+  color: #ffffff; 
+}
+
+.btn:active, .btn-custom:focus {
+  background-color: #4d3726  !important; 
+  color: #ffffff; 
+}
+
+
+
+
+.btn {
+  border: none; 
+  box-shadow: none; 
+}
+  /* .rounded-top-custom {
+    border-top-left-radius: 15px; 
+    border-top-right-radius: 15px;
+  } */
+  
+
+/* .book-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.book-tile {
+    border: 1px solid #ddd;
+    background-color: rgb(127, 199, 199);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.book-tile:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book-image {
+    max-width: 100%;
+    height: 300px;
+
+}
+
+.book-name {
+    font-size: 18px;
+    margin: 10px 0;
+} 
+
+.book-author, .book-price, .number-of-books {
+    font-size: 14px;
+    color: #555;
+}
+.btn {
+    background-color: #007B7B; 
+    color: white;
+    border: none;
+    width:80px;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #006666; 
+} */

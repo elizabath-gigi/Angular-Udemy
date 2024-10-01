@@ -1,6 +1,4 @@
-<!-- <div class="background-image-container">
-  <img src="path-to-your-image.jpg" alt="Description of image" width="300" height="200">
-</div> -->
+<div class="background-gradient">
 <form *ngIf="selected==='login'" class="form-container" #loginForm="ngForm" (ngSubmit)="login(loginDto)">
   <div class="form-group">
     <label i18n for="Username">Username:</label>
@@ -18,7 +16,8 @@
   <button i18n class="button-Register" type="button" (click)="changeToRegister()">Register</button>
   <button i18n class="button-Reset" type="button" (click)="changeToReset()">Reset Password</button>
 </form>
-
+</div>
+<div class="background-gradient">
 <form *ngIf="selected==='register'" class="form-container" #registerForm="ngForm" (ngSubmit)="register(user)">
   <div class="form-group">
     <label i18n for="Username">Username:</label>
@@ -45,9 +44,9 @@
   <button i18n class="button-Register" type="submit">Register</button>
   <button i18n class="button-Login" type="submit"  (click)="changeToLogin()">Login</button>
 </form>
+</div>
 
-
-
+<div class="background-gradient">
 <form *ngIf="selected==='reset'" class="form-container" #resetForm="ngForm" (ngSubmit)="reset(resetDto)">
   <div class="form-group">
     <label i18n for="Username">Username:</label>
@@ -70,4 +69,5 @@
   <button i18n class="button-Reset" type="submit">Reset</button>
   <button i18n class="button-Login" type="submit"  (click)="changeToLogin()">Login</button>
 </form>
+</div>
 

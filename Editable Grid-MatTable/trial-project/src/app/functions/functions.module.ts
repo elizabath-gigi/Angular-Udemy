@@ -9,6 +9,7 @@ import { NgModule } from "@angular/core";
 import { FormsModule, NgModel, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule} from "@angular/common";
+import { ToastrModule } from 'ngx-toastr';
 
 import { FunctionsUserComponent } from './functions-user/functions-user.component';
 import { FunctionsComponent } from './functions.component';
@@ -27,9 +28,10 @@ import { BorrowlistComponent } from "./borrowlist/borrowlist.component";
 import { GetBooksComponent } from "./get-books/get-books.component";
 import { CartComponent } from "./cart/cart.component";
 import { BorrowComponent } from "./borrow/borrow.component";
-import { MatButtonModule } from "@angular/material/button";
 import { FunctionsAdminComponent } from "./functions-admin/functions-admin.component";
-
+import { BrowserModule } from "@angular/platform-browser";
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -63,8 +65,18 @@ import { FunctionsAdminComponent } from "./functions-admin/functions-admin.compo
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    MatIconModule,
     BrowserAnimationsModule,
-    JwtModule
+    JwtModule,
+    BrowserModule,
+    ToastrModule.forRoot({
+      timeOut: 3000, 
+      positionClass: 'toast-bottom-center', 
+      preventDuplicates: true, 
+      closeButton: true, 
+      progressBar: true, 
+    })
+    
 ],
   exports: [
     FunctionsComponent

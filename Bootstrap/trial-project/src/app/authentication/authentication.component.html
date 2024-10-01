@@ -1,0 +1,106 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="box row">
+    <!-- Left column with title and image -->
+    <div class="col text-center p-4 d-flex flex-column justify-content-between align-items-center">
+      <h4 class="fw-bold text-primary mb-1">Welcome to</h4>
+      <h2 class="fw-bold text-primary mb-2">Enchanted Bookshelf</h2>
+      <img src="assets/images/file.png" alt="Library Image" class="img-fluid mt-3" />
+      <h6 class="fst-italic fw-light text-secondary mb-2">Discover magic in every chapter</h6>
+    </div>
+     
+    
+    <div class="col-md-6 bg-primary p-2 d-flex flex-column justify-content-center">
+    
+      
+      <form *ngIf="selected === 'login'" class="form-container p-4 rounded bg-primary d-flex flex-column" #loginForm="ngForm" (ngSubmit)="login(loginDto)">
+        <div class="form-group">
+          <label class="text-light" i18n for="Username">Username:</label>
+          <input id="Username" class="form-control" [(ngModel)]="loginDto.username" name="Username" required>
+        </div>
+        <div class="form-group">
+          <label class="text-light" i18n for="Password">Password:</label>
+          <input id="Password" class="form-control" [(ngModel)]="loginDto.password" name="Password" required type="password">
+        </div>
+        <button i18n class="btn btn-light w-100 mt-3 mb-3" type="submit">Login</button>
+        <div class="mb-3 text-center">
+          <a i18n href="#" class="text-light" (click)="changeToRegister()">Don't have an account?</a>
+        </div>
+        <div class="text-center">
+          <a i18n href="#" class="text-light" (click)="changeToReset()">Forgot Password</a>
+        </div>
+      </form>
+
+      
+      <form *ngIf="selected === 'register'" class="form-container p-4 rounded bg-primary" #registerForm="ngForm" (ngSubmit)="register(user)">
+        <div>
+          <label class="text-light" i18n for="Username">Username:</label>
+          <input id="Username" class="form-control" [(ngModel)]="user.userName" name="Username" required>
+        </div>
+        <div>
+          <label class="text-light" i18n for="Email">Email:</label>
+          <input id="Email" class="form-control" [(ngModel)]="user.email" name="Email" required>
+        </div>
+        <div>
+          <label class="text-light" i18n for="Password">Password:</label>
+          <input id="Password" class="form-control" [(ngModel)]="user.password" name="Password" required type="password">
+        </div>
+        
+        <!-- <div>
+          <label class="text-light" i18n for="Name in Hindi">Name in Hindi:</label>
+          <input id="Name in Hindi" class="form-control" [(ngModel)]="user.nameHindi" name="Name in Hindi" required>
+        </div> -->
+        <button i18n class="btn btn-light w-100 mt-3" type="submit">Register</button>
+        <div class="mt-3 text-center">
+          <a i18n href="#" class="text-light" (click)="changeToLogin()">Already have an account? Login</a>
+        </div>
+      </form>
+
+      
+      <form *ngIf="selected === 'forgot'" class="form-container p-4 rounded bg-primary" #forgotForm="ngForm" (ngSubmit)="sendEmail()">
+        <div class="form-group">
+          <label class="text-light" i18n for="Email">Email:</label>
+          <input id="Email" class="form-control" [(ngModel)]="Email" name="Email" required>
+        </div>
+        <button i18n class="btn btn-light w-100 mt-3" type="submit">Submit</button>
+        <div class="mt-3 text-center">
+          <a i18n href="#" class="text-light" (click)="changeToLogin()">Back to Login</a>
+        </div>
+        <div>
+          <h5>{{message}}</h5>
+        </div>
+      </form>
+
+      
+      <form *ngIf="selected === 'validate'" class="form-container p-4 rounded bg-primary" #otpForm="ngForm" (ngSubmit)="validateOtp()">
+        <div class="form-group">
+          <label class="text-light d-flex" i18n for="Otp">Enter OTP:</label>
+          <ng-otp-input 
+            [config]="otpConfig" 
+            (onInputChange)="onOtpChange($event)"
+            class="otp-container">
+          </ng-otp-input>
+        </div>
+        <button i18n class="btn btn-light w-100 mt-3" type="submit">Submit</button>
+        <div class="mt-3 text-center">
+          <a i18n href="#" class="text-light" (click)="changeToLogin()">Back to Login</a>
+        </div>
+        <div>
+          <h5>{{message}}</h5>
+        </div>
+      </form>
+
+  
+      <form *ngIf="selected === 'reset'" class="form-container p-4 rounded bg-primary" #resetForm="ngForm" (ngSubmit)="resetPassword()">
+        <div class="form-group">
+          <label class="text-light" i18n for="NewPassword">New Password:</label>
+          <input id="NewPassword" class="form-control" [(ngModel)]="newPassword" name="NewPassword" required type="password">
+        </div>
+        <button i18n class="btn btn-light w-100 mt-3" type="submit">Reset Password</button>
+        <div class="mt-3 text-center">
+          <a i18n href="#" class="text-light" (click)="changeToLogin()">Back to Login</a>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>

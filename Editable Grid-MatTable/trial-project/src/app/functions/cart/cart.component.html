@@ -5,6 +5,11 @@
         <button class="close-btn" (click)="closeCart()">Close</button>
         <div *ngIf="cartItems && cartItems.length > 0; else noItems">
             <ul class="cart-list">
+                <div class="cart-header">
+                    <span class="header-book-name">Book Name</span>
+                    <span class="header-book-price">Price</span>
+                    <span class="header-actions">Actions</span>
+                </div>
                 <li *ngFor="let item of cartItems" class="cart-item">
                     <div class="item-details">
                         <span class="book-name">{{ item.bookName }}</span>

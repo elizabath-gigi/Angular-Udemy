@@ -5,6 +5,12 @@
         <button class="close-btn" (click)="closeBorrow()">Close</button>
         <div *ngIf="getJsonValue && getJsonValue.length > 0; else noBorrows">
             <ul class="borrow-list">
+                <div class="cart-header">
+                   <span class="header-book-name">Book Name</span>
+                    <span class="header-borrowdate">Borrow Date</span>
+                    <span class="header-returndate">Return Date</span>
+                    <span class="header-actions">Actions</span>
+                </div>
                 <li *ngFor="let borrow of getJsonValue" class="borrow-item">
                     <div class="item-details">
                         <span class="book-name">{{ borrow.bookName }}</span>

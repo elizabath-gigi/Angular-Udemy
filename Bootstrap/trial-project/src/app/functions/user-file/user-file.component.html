@@ -1,0 +1,15 @@
+
+<div class="overlay" (click)="closeDialog()"></div>
+
+
+<div class="upload-container bg-light p-4 rounded">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="file-input-container mb-3">
+            <h4 class="text-primary">File Upload</h4>
+            
+            <input type="file" class="form-control" (change)="onFileSelected($event)" required />
+        </div>
+        
+        <button class="btn btn-primary" i18n type="submit">Upload</button>
+    </form>
+</div>

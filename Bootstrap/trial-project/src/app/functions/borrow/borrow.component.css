@@ -1,0 +1,139 @@
+ 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: 999; 
+  }
+  
+  .btn {
+    background-color: #4d3726  !important; 
+    color: #ffffff; 
+  }
+  
+  .btn:hover {
+    background-color: #8B5E3C  !important; 
+    color: #ffffff; 
+  }
+  
+  .btn:active, .btn-custom:focus {
+    background-color: #4d3726  !important; 
+    color: #ffffff; 
+  }
+  .btn {
+    border: none; 
+    box-shadow: none; 
+  }
+ /* 
+  .borrow-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; 
+    width: 60%;
+    max-width: 600px;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width:80px;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin: 10px;
+    background-color: #333; 
+    color:white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .close-btn:hover {
+    background-color: #212222;  
+  }
+  .return-btn {
+    background-color: #f44336; 
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .return-btn:hover {
+    background-color: #d32f2f; 
+  }
+  
+  
+  .borrow-list {
+    list-style:none;
+    padding: 0;
+  }
+  
+  .borrow-item {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    align-items: flex-start;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .item-details {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+  }
+  
+  .book-name,
+.borrow-date,
+.return-date {
+  flex-grow: 1; 
+  margin-right: 10px; 
+  width:50px;
+}
+.cart-header {
+  display: flex;
+  justify-content: left;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.header-book-name
+{
+  width:50px
+}
+
+.header-borrowdate {
+  text-align:left ;
+  width:50px
+}
+.header-returndate {
+  text-align:left ;
+  width:50px
+}
+.header-actions {
+  text-align:left ;
+  width:50px
+} */

@@ -19,21 +19,25 @@
     font-weight: bold; /* Bold text for better readability */
   }
   
+  
   /* Cell styling */
   td.mat-cell {
-    background-color: rgb(127, 199, 199); /* Light background color for cells */
+    background-color: rgb(127, 199, 199); 
   }
   
   /* Save button styling */
   button.mat-button {
-    background-color: rgb(127, 199, 199); /* Button background color */
-    color: white; /* Button text color */
+    /* background-color: rgb(127, 199, 199);  */
+    color: black; /* Button text color */
     border-radius: 4px; /* Optional rounded corners */
+    display: flex;
+    flex-direction: row;
   }
   
   /* Button hover effect */
   button.mat-button:hover {
-    background-color: rgb(105, 179, 179); /* Slightly darker color on hover */
+    /* background-color: rgb(105, 179, 179); */
+    color:black
   }
   
   /* Paginator styling */
@@ -110,3 +114,56 @@ h5{
     background-color: #006666;
     transform: scale(1.05);
   } 
+  .books {
+    flex: 1 1 75%; /* Books take up 75% of the space */
+  }
+.buttons {
+    
+    background-color:#0d5b69  ;
+    color:black;
+    width: 200px;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    padding: 10px;
+    margin-left:5px;
+    margin-top: 75px;
+    justify-content: center;
+}
+.buttons-users {
+    
+  background-color:#0d5b69  ;
+  width: 200px;
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  padding: 10px;
+  margin-left:auto; 
+  margin-right: 15px;
+  margin-top: 105px;
+  justify-content: center;
+  position: absolute;
+  top: 150px;
+  right: 0px;
+
+}
+ button {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 0.5rem;
+    margin: 5px; 
+    background-color: #5F9EA0;
+    color: black;
+    border: 1px solid black; 
+    border-radius: 5px; 
+    font: inherit;
+    cursor: pointer;
+    text-align: center;
+    width: 150px; 
+    height: 50px;
+    vertical-align: middle;
+}  
+button:hover {
+    background-color:#92c0c0 ;
+  }

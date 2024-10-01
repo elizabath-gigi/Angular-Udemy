@@ -1,3 +1,4 @@
+import { ToastrService } from 'ngx-toastr';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FunctionsService } from '../functions.service'; 
@@ -12,10 +13,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class FunctionsUserComponent implements OnInit{
 
+
   message!: string;
   role: any;
   page: string="";
-  constructor(private functionsService:FunctionsService,private router: Router,public jwtHelper: JwtHelperService,private route: ActivatedRoute){}
+  searchKey: string="";
+  constructor(private functionsService:FunctionsService,private toastr:ToastrService,private router: Router,public jwtHelper: JwtHelperService,private route: ActivatedRoute){}
   public isFunction="";
   public buttonName="";
   public getJsonValue: any;
@@ -72,6 +75,28 @@ export class FunctionsUserComponent implements OnInit{
   {
     this.page="";
   }
+  public search()
+  {
+    this.functionsService.search(this.searchKey).subscribe({
+      next:(books)=>{
+        this.isFunction = "GetBooks";
+        this.getJsonValue = books;
+      },
+      error: (error) => {
+        console.error($localize`Error from server: `, error);
+        
+        // Extract the custom error message from the backend
+        const errorMessage = error.error ? error.error.message|| 'Search Books failed.':'Search Books failed.';
+        this.message=errorMessage;
+        //alert(errorMessage);
+        this.toastr.error(errorMessage);
+        console.log(errorMessage);
+      }
+    })
+  }
+  onSearchChange() {
+    this.search()
+    }
   public getBooks()
     {
       this.functionsService.getBooks().subscribe({

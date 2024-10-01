@@ -39,6 +39,13 @@ export class FunctionsService
           })
           return this.http.delete(`https://localhost:7261/Admin/deleteUser?UserName=${Username}`,{headers:header})    
     }
+    search(searchKey:string)
+    {
+        const header=new HttpHeaders({
+            contentsType:"application/json"
+          })
+          return this.http.get(`https://localhost:7254/Library/search?searchKey=${searchKey}`,{headers:header})    
+    }
     getBooks(): Observable<any>
     {
        return this.http.get('https://localhost:7254/Library/getBooks')   

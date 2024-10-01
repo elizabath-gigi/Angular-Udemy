@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import { FunctionsModule } from './functions/functions.module';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { ToastrModule } from 'ngx-toastr'; 
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -25,7 +27,16 @@ import { AuthInterceptor } from './authentication/auth.interceptor';
       CommonModule,
       FormsModule,
       RouterModule.forRoot(routes),
-      TranslateModule.forRoot()
+      TranslateModule.forRoot(),
+      BrowserModule,
+      BrowserAnimationsModule, 
+      ToastrModule.forRoot({
+        timeOut: 3000, 
+        positionClass: 'toast-bottom-center', 
+        preventDuplicates: true, 
+        closeButton: true, 
+        progressBar: true, 
+      })
     ],
     bootstrap:[AppComponent],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],

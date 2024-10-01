@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Pacifico&family=Pinyon+Script&family=Sacramento&display=swap');
+
+.image-container {
+    text-align: center;
+    overflow: hidden; 
+  }
+  
+  .image-container img {
+    width: 100%; /* Make sure the image takes the full width */
+    height: 75%; /* Height adjusts automatically to the width */
+    
+  }
+  
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem; /* Fixed readable size, adjust as needed */
+    font-weight: bold;
+    padding: 10px;
+    color: white;
+    /* background: rgba(255, 255, 255, 0.4);  */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Improves text readability */
+    max-width: 80%; /* Ensure the text doesn't overflow the image */
+  }
+  h6{
+    font-family: 'Dancing Script', cursive;
+    font-size:20px  
+  }
+  @media (max-width: 768px) {
+    .overlay-text {
+      font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+  }
+  

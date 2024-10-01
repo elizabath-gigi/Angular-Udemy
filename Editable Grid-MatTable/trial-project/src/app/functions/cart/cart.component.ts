@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FunctionsService } from '../functions.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-cart',
@@ -16,8 +17,8 @@ export class CartComponent implements OnInit {
   cartLength! : number;
 
   constructor(
-    private functionsService: FunctionsService) {}
-
+    private functionsService: FunctionsService,private toastr: ToastrService) {}
+  
   ngOnInit(): void {
     // this.route.queryParams.subscribe(params => {
     //   this.isVisible = params['IsVisible'] === 'true'; // Check if the cart pop-up should be visible
@@ -45,7 +46,7 @@ export class CartComponent implements OnInit {
         } else if (errorMessage === "User not authenticated") {
           alert($localize`User not authenticated`);
         } else {
-          alert($localize`An error occurred while retrieving the cart`);
+          //alert($localize`An error occurred while retrieving the cart`);
         }
       }
     });
@@ -63,9 +64,9 @@ export class CartComponent implements OnInit {
         const errorMessage = error.error;
         this.message = errorMessage;
         if (errorMessage === "Cart is empty") {
-          alert($localize`Cart is empty`);
+          //alert($localize`Cart is empty`);
         } else {
-          alert($localize`An error occurred while retrieving the cart`);
+          //alert($localize`An error occurred while retrieving the cart`);
         }
       }
     });
@@ -76,7 +77,8 @@ export class CartComponent implements OnInit {
         this.cartItems = cartItems;
         this.GetCartValue();
           this.message = $localize`Book borrowed successfully`;
-          alert($localize`Book borrowed successfully`);
+          this.toastr.success("Book borrowed successfully")
+          //alert($localize`Book borrowed successfully`);
           console.log(`Book borrowed successfully`);
          
       },
@@ -85,10 +87,12 @@ export class CartComponent implements OnInit {
           const errorMessage = error.error;
           this.message = errorMessage;
           if (errorMessage === "Book not found in cart") {
-              alert($localize`Book not found in cart`);
+              //alert($localize`Book not found in cart`);
+              this.toastr.error($localize`Book not found in cart`)
           }
           else if(errorMessage === "Cart is empty") {
-            alert($localize`Cart is empty`);
+            //alert($localize`Cart is empty`);
+            this.toastr.error($localize`Cart is empty`);
         }
       }
   });
@@ -101,12 +105,13 @@ export class CartComponent implements OnInit {
     this.functionsService.RemoveFromCart(BookName).subscribe({
       next: (cartItems) => {            
         this.cartItems = cartItems;
-        console.log('rremove carts',cartItems);
+        console.log('remove carts',cartItems);
         debugger;
         this.cartLength = this.cartItems.length;
         console.log(cartItems)
           this.message = $localize`Book removed from cart successfully`;
-          alert($localize`Book removed from cart successfully`);
+          //alert($localize`Book removed from cart successfully`);
+          this.toastr.success($localize`Book removed from cart successfully`)
           console.log(`Book removed from cart successfully`);
           this.GetCartValue();
       },
@@ -115,10 +120,12 @@ export class CartComponent implements OnInit {
           const errorMessage = error.error;
           this.message = errorMessage;
           if (errorMessage === "Book not found in cart") {
-              alert($localize`Book not found in cart`);
+              //alert($localize`Book not found in cart`);
+              this.toastr.error($localize`Book not found in cart`)
           }
           else if(errorMessage === "Cart is empty") {
-            alert($localize`Cart is empty`);
+            //alert($localize`Cart is empty`);
+            this.toastr.error($localize`Cart is empty`)
         }
       }
   });

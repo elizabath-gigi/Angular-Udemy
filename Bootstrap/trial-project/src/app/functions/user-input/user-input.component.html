@@ -1,0 +1,88 @@
+<div class="overlay" (click)="closeDialog()"></div>
+<div class="user-table-container">
+<dialog open class="popup">
+  <form class="form-container bg-light p-4 rounded border-primary border-2" #popupForm="ngForm" (ngSubmit)="userInput()">
+    
+    <div *ngIf="buttonName === 'Update'" class="form-group">
+      <label i18n for="bookId" class="text-primary">Book Id:</label>
+      <input
+        id="bookId"
+        [(ngModel)]="book.bookId"
+        name="bookId"
+        class="form-control border-primary"
+        required
+      />
+    </div>
+
+
+    <div class="form-group">
+      <label i18n for="bookName" class="text-primary">Book Name:</label>
+      <input
+        id="bookName"
+        [(ngModel)]="book.bookName"
+        name="bookName"
+        class="form-control border-primary"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label i18n for="bookAuthor" class="text-primary">Book Author:</label>
+      <input
+        id="bookAuthor"
+        [(ngModel)]="book.bookAuthor"
+        name="bookAuthor"
+        class="form-control border-primary"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label i18n for="noOfBooks" class="text-primary">Number of Books:</label>
+      <input
+        id="noOfBooks"
+        [(ngModel)]="book.noOfBook"
+        name="noOfBooks"
+        class="form-control border-primary"
+        required
+      />
+    </div>
+
+  
+    <div class="form-group">
+      <label i18n for="price" class="text-primary">Price:</label>
+      <input
+        id="price"
+        [(ngModel)]="book.price"
+        name="price"
+        class="form-control border-primary"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label i18n for="price" class="text-primary">Description:</label>
+      <input
+        id="description"
+        [(ngModel)]="book.description"
+        name="description"
+        class="form-control border-primary"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label i18n for="bookImage" class="text-primary">Book Image:</label>
+      <input
+        id="bookImage"
+        type="file"
+        (change)="onImageChange($event)"
+        name="bookImage"
+        class="form-control"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary">{{ buttonName }}</button>
+  </form>
+  <app-message *ngIf="message" [message]="message"></app-message>
+</dialog>
+</div>

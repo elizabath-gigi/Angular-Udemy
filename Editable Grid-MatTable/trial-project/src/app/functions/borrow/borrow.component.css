@@ -90,3 +90,31 @@
   margin-right: 10px; /* Space between items */
   width:50px;
 }
+.cart-header {
+  display: flex;
+  justify-content: left;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.header-book-name
+{
+  width:50px
+}
+
+.header-borrowdate {
+  text-align:left ;
+  width:50px
+}
+.header-returndate {
+  text-align:left ;
+  width:50px
+}
+.header-actions {
+  text-align:left ;
+  width:50px
+}
