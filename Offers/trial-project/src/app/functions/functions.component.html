@@ -1,0 +1,55 @@
+<div >
+    <div class="header">
+        
+        <div class="title">
+            <h1 i18n>Library Management</h1>
+        </div>
+        <div class="greeting">
+            <h5><span i18n>Hi</span> {{username}}</h5>
+        </div>
+        <div class="logout">
+            <a i18n (click)="logout()">Logout</a>
+        </div>
+        
+</div>
+    <div class="buttons">
+        <button i18n (click)="getBooks()">Get Books </button>
+        <button i18n (click)="getBookById()">Get Book By Id</button>
+        <button i18n (click)="getBookByName()">Get Book By Name</button>
+        <button i18n (click)="getBooksInPages()">Get Books In Pages</button>
+        <button i18n (click)="onAddBook()">Add Book </button>
+        <button i18n (click)="bulkUpload()">Bulk Upload</button>
+        <button i18n (click)="updateBook()">Update Book</button>
+        <button i18n (click)="deleteBook()">Delete Book</button>
+    </div>
+    <div class="buttons-users">
+        <button i18n (click)="getUsers()">Get Users </button>
+        <button i18n (click)="getUserById()">Get User By Id</button>
+        <button i18n (click)="getUserByUsername()">Get User By Username</button>
+        <button i18n (click)="deleteUser()">Delete User</button>
+        <button i18n (click)="getBorrowList()">Get Borrow List </button>
+        
+    </div>
+    <!-- <app-user-input  *ngIf="isFunction === 'Add'" [buttonName]="buttonName" [isFunction]="isFunction"/> 
+    <app-user-input  *ngIf="isFunction === 'Update'" [buttonName]="buttonName" [isFunction]="isFunction"/>  -->
+    <app-user-id *ngIf="isFunction === 'GetBookById'" [buttonName]="buttonName" [isFunction]="isFunction"/>
+    <app-user-id *ngIf="isFunction === 'GetBookByName'" [buttonName]="buttonName" [isFunction]="isFunction"/>
+    <app-user-id *ngIf="isFunction === 'Delete'" [buttonName]="buttonName" [isFunction]="isFunction"/>
+    <app-user-pages *ngIf="isFunction==='GetInPages'"/>
+    <app-user-file *ngIf="isFunction==='BulkUpload'"/>
+    <div class="books">
+        <app-user-table *ngIf="isFunction==='GetBooks'" [getJsonValue]="getJsonValue"/>
+    </div>
+    <app-get-users *ngIf="isFunction==='GetUsers'" [getJsonValue]="getJsonValue"/>
+    <app-get-user *ngIf="isFunction === 'GetUserById'" [buttonName]="buttonName" [isFunction]="isFunction"/>
+    <app-get-user *ngIf="isFunction === 'GetUserByUsername'" [buttonName]="buttonName" [isFunction]="isFunction"/>
+    <app-get-user *ngIf="isFunction === 'DeleteUser'" [buttonName]="buttonName" [isFunction]="isFunction"/>
+    <app-borrowlist *ngIf="isFunction==='GetBorrowList'" [getJsonValue]="getJsonValue"/>
+    <app-message *ngIf="message!=null" [message]=message/>
+
+
+
+<!-- <h1 *ngIf="isFunction==='GetBooks'">Get Method</h1> -->
+    <!-- <p *ngIf="isFunction==='GetBooks'">{{getJsonValue|json}}</p> -->
+<!-- <h1>Post Method</h1>
+    <p>{{postJsonValue|json}}</p> -->

@@ -1,0 +1,26 @@
+<div class="popup">
+    <dialog open>
+      <form class="form-container" #popupForm="ngForm" (ngSubmit)="userInput()">
+        <div *ngIf="isFunction === 'GetUserById' ">
+            <label i18n for="UserId">User Id:</label>
+            <input id="UserId" [(ngModel)]="UserId" name="userId" required #userIdInput="ngModel">
+          </div>                  
+        <div *ngIf="isFunction=='GetUserByUsername'|| isFunction === 'DeleteUser'">
+          <label i18n  for="username">Username:</label>
+          <input id="username" [(ngModel)]="Username" name="username" required usernameInput="ngModel">
+        </div>      
+        <button type="submit">{{buttonName}}</button>
+      </form>
+      <app-message *ngIf="message" [message]="message"></app-message>
+      <form *ngIf="postJsonValue != null && isFunction === 'GetUserByUsername'|| isFunction === 'GetUserById'">
+        <div *ngIf="entries.length > 0">
+          <div *ngFor="let entry of entries">
+            <p>{{ entry[0] }}: {{ entry[1] }}</p>
+          </div>
+        </div>
+      </form>
+    </dialog>
+  </div>
+   
+        
+        

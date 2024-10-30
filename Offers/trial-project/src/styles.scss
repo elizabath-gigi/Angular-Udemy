@@ -1,0 +1,60 @@
+@import '../node_modules/bootstrap/scss/functions';
+// Define color palette variables
+$primary: #4d3726;
+$secondary: #8B5E3C;
+$dark:rgba(248, 8, 8, 0.111);
+$light: #F6E3BA;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "light": $light,
+  "dark": $dark
+);
+// 3. Import the rest of Bootstrap after the variable overrides
+@import '../node_modules/bootstrap/scss/bootstrap';
+// 4. Custom global styles
+html, body {
+  //background-color:rgb(239, 239, 203);
+  background-color: rgb(236, 233, 220);
+  //background: linear-gradient(135deg, #3e2723, #6d4c41, #d7ccc8); 
+}
+
+body {
+  margin: 0;
+  font-family: "DM Sans", 'Times New Roman', Times, serif;
+}
+.custom-toast {
+  top: 147px !important;   
+  right: 20px !important; 
+}
+.toast-success {
+  background-color: #4d3726 !important;  /* Use !important if needed */
+  color: #F6E3BA !important; /* Make sure this applies */
+  padding: 1rem !important;
+  border-radius: 0.25rem !important;
+  padding: 1rem !important; 
+ 
+}
+.toast-error {
+  background-color: #442212 !important;  /* Use !important if needed */
+  color: #F6E3BA !important; /* Make sure this applies */
+  padding: 1rem !important;
+  border-radius: 0.25rem !important;
+  padding: 1rem !important; 
+}
+.toast-warning {
+  background-color: #8B5E3C !important;  /* Use !important if needed */
+  color: #F6E3BA !important; /* Make sure this applies */
+  padding: 1rem !important;
+  border-radius: 0.25rem !important;
+  padding: 1rem !important; 
+ 
+}
+.toast-success .toast-title,
+.toast-error .toast-title,
+.toast-warning .toast-title,
+.toast-error .toast-message,
+.toast-success .toast-message{
+padding-left:2rem !important;
+}

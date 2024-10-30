@@ -1,0 +1,41 @@
+<div class="overlay" (click)="closeCart()"></div>
+<div class="modal show d-block" id="cartModal" >
+    <div class="modal-dialog modal-dialog-centered modal-lg " >
+      <div class="modal-content bg-light">
+        <div class="modal-header">
+          <h5 class="modal-title"> Your Cart</h5>
+          <button type="button" class="btn btn-dark" (click)="closeCart()">Close</button>
+        </div>
+        <div class="modal-body">
+          <div *ngIf="cartItems && cartItems.length > 0; else noItems">
+            <div class="row font-weight-bold border-bottom pb-2">
+              <div class="col-6">Book Name</div>
+              <div class="col-3">Price</div>
+              <div class="col-3 text-center">Actions</div>
+            </div>
+            <ul class="list-unstyled mt-3">
+              <li *ngFor="let item of cartItems" class="mb-3">
+                <div class="row align-items-center">
+                  <div class="col-6">{{ item.bookName }}</div>
+                  <div class="col-3">{{ item.price | currency }}</div>
+                  <div class="col-3 text-center">
+                    <button class="btn btn-primary" (click)="RemoveFromCart(item.bookName,item.price)">Remove</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="total-value text-right">
+              <strong>Total Amount: </strong>{{ cartValue | currency }}
+            </div>
+            <div class="borrow-action text-center mt-3">
+              <button class="btn btn-primary" (click)="BorrowBooks()">Borrow</button>
+            </div>
+          </div>
+          <ng-template #noItems>
+            <p class="text-center">No items in the cart.</p>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+  

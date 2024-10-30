@@ -1,0 +1,31 @@
+<div class="user-table-container align-items-center justify-content-center">
+  <div class="table-responsive align-items-center justify-content-center">
+    <mat-form-field class="mb-3 w-50">
+      <mat-label>Search users...</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Search books">
+    </mat-form-field>
+  <table mat-table [dataSource]="dataSource" class="table align-items-center justify-content-center">
+  
+    <ng-container *ngFor="let column of displayedColumns" [matColumnDef]="column">
+      <th mat-header-cell *matHeaderCellDef> {{ column | uppercase }} </th>
+      <td mat-cell [style.background-color]="color" *matCellDef="let element"> {{ element[column] }} </td>
+    </ng-container>
+
+   
+    <ng-container matColumnDef="returnBook">
+      <th mat-header-cell *matHeaderCellDef> DELETE USER </th>
+      <td mat-cell [style.background-color]="color" *matCellDef="let element">
+        <button mat-icon-button (click)="deleteUser(element.userName)" data-bs-toggle="tooltip" title="Delete user">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    
+    <tr mat-header-row *matHeaderRowDef="displayedColumns.concat('returnBook')"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns.concat('returnBook');"></tr>
+  </table>
+</div>
+
+  <mat-paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>

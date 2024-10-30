@@ -1,0 +1,101 @@
+::ng-deep .user-table-container {
+  width: 80%;
+  left: 20vh;
+  top: 15vh;
+  position: absolute;
+
+}
+::ng-deep .mat-mdc-raised-button 
+{
+  background-color:#daa781 !important;
+  color:#4d3726 !important;
+}
+::ng-deep .mdc-data-table__cell{
+  text-align: center !important;
+}
+::ng-deep    table {
+    width: 500px;
+    border-collapse: collapse; 
+    width: 80%; 
+  max-width: 600px; 
+  margin-left: auto; 
+  overflow-x: auto; 
+  color: black;
+  }
+  
+  ::ng-deep     .mat-header-cell {
+     
+    font-weight: bold;
+    text-align: center; 
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd; 
+  }
+
+  ::ng-deep  .mat-header-row{
+    border-bottom: 2px solid #F6E3BA;
+    font-weight: bold;
+  }
+
+  ::ng-deep   .mat-mdc-table .mat-mdc-header-row {
+    font-weight: bold;
+    text-align: center;
+    background-color: #8B5E3C;
+  }
+
+  ::ng-deep  .mat-mdc-table .mat-mdc-header-cell {
+    text-align: center;
+    color: #F6E3BA !important;
+    
+  }
+  ::ng-deep .mat-mdc-paginator {
+    background-color:  #8B5E3C !important;
+    color: #F6E3BA !important;
+  }
+  ::ng-deep  .mat-mdc-table_content  .mat-cell {
+    padding: 0.5rem;
+    background-color: rgb(234, 234, 210);
+    text-align: center; 
+  }
+  
+  ::ng-deep  .table {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); 
+    
+  }
+  ::ng-deep .mat-mdc-row, .mdc-data-table__content
+  {
+    background-color:#F6E3BA ;
+  }
+  
+  ::ng-deep  .mdc-data-table__cell {
+    text-align: center;}
+  
+
+  ::ng-deep   table {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  ::ng-deep  tr {
+    background-color: #8B5E3C;
+    color:#8B5E3C ;
+    border: 1px solid #ddd;
+  }
+
+  
+  ::ng-deep  tr:hover {
+    background-color: #f1f1f1;
+  }
+  ::ng-deep  th{
+    background-color: #8B5E3C;
+    color:#8B5E3C ;
+    border: 1px solid #ddd;
+  }
+  ::ng-deep  button{
+    background-color: #8B5E3C;
+    color:#8B5E3C ;
+  }
+  ::ng-deep.mat-mdc-raised-button
+  {
+    background-color: #8B5E3C;
+    color:#8B5E3C
+  }

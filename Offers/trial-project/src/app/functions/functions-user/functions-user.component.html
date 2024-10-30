@@ -1,0 +1,73 @@
+<div class="container-fluid vh-100 d-flex flex-column">
+
+  <div class="top bg-light text-primary py-4">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+       
+        <div class="col-1 col-md-4 d-flex justify-content-end align-items-end">
+          <!-- <img src="assets/images/file.png" alt="Library Image" class="img-fluid" style="max-height:130px;" /> -->
+          <img src="assets\images\output.png" alt="Library Image" class="img-fluid mt-3" style="max-height:150px;" />
+        </div>
+
+      
+        <div class="col-2 col-md-4 text-start">
+          <h2 class="title">Enchanted Bookshelf</h2>
+          <h6 class="tagline">Discover magic in every chapter</h6>
+        </div>
+
+       
+        <div class="col text-end">
+          <h5 class="mb-0 p-2 mx-2">Hi, {{username}}!</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-home *ngIf="isFunction==='Home'"/>
+  <app-get-books *ngIf="isFunction==='GetBooks'" [getJsonValue]="getJsonValue" (messageEvent)="receiveMessage($event)"></app-get-books>
+
+
+  <nav class="navbar navbar-dark bg-primary fixed-top">
+    <div class="container-fluid">
+     
+      <div *ngIf="isFunction==='GetBooks'" class="d-flex align-items-center me-auto mx-2">
+        <input 
+          type="text" 
+          placeholder="Search books,authors..." 
+          class="form-control me-2" 
+          [(ngModel)]="searchKey" 
+          (input)="onSearchChange()"
+          style="height: 38px; max-width: 300px;"
+        />
+        <button class="btn btn-light" (click)="search()" style="height: 38px;">
+          <mat-icon>search</mat-icon>
+        </button>
+      </div>
+      
+     
+      <ul class="navbar-nav ms-auto d-flex flex-row align-items-center">
+        <li class="nav-item mx-2">
+          <a class="nav-link text-light cursor-pointer" (click)="goHome()">Home</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link text-light cursor-pointer" (click)="getBooks()">Explore Books</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link text-light cursor-pointer" (click)="onCartClick()">Cart
+            <span class="badge bg-light text-primary">{{ noOfBooksInCart }}</span>
+          </a>
+          
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link text-light cursor-pointer" (click)="onBorrowClick()">Borrows</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link text-light cursor-pointer" (click)="logout()">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+</div>
+
+<app-cart *ngIf="page==='Cart'" (close)="onClose()" (messageEvent)="receiveMessage($event)"> </app-cart>
+<app-borrow *ngIf="page==='Borrow'" (close)="onClose()"></app-borrow>
